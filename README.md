@@ -38,8 +38,6 @@ The project is built using **Node.js, Express, EJS, CSS, and JavaScript**, provi
 ---
 
 ## 🖼️ Screenshots
-```md
-## 📸 Screenshots
 
 ### 🏠 Landing Page
 ![Landing Page](./screenshots/landing-page.png)
