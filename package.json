@@ -1,7 +1,6 @@
 {
   "name": "dsa-animation",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,5 +11,17 @@
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^4.19.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RadhikaBhasin0711/DSA-learning-platform.git"
+  },
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/RadhikaBhasin0711/DSA-learning-platform/issues"
+  },
+  "homepage": "https://github.com/RadhikaBhasin0711/DSA-learning-platform#readme",
+  "description": ""
 }
+
