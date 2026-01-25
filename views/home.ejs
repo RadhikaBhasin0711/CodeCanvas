@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,32 +13,35 @@
     <div id="wrapper">
         <div class="container">
             <div class="head">
-                <img src="background.png" class="bg">
+                <div class="nav-left">
+                    <span>Home</span>
+                    <span>About us</span>
+                </div>
 
-
-                <p class="p1">Home</p>
-                <p class="p2">About us</p>
-                <button class="signup">Sign up</button>
-                <button class="login">Login</button>
+                <div class="nav-right">
+                    <button class="login">Login</button>
+                    <button class="signup">Sign up</button>
+                </div>
             </div>
+
             <section class="main">
                 <h1 class="cc">CodeCanvas</h1>
                 <div class="buttons">
-                    <button class="learn">//Learn
-                        <span class="content1"> 
-                            <p class="in-learn">Click here to master DSA essentials with our comprehensive learning resources from basics to advanced problem solving techniques.</p>    
-                        </span>
+                    <button class="learn">
+                        <h3>// Learn</h3>
+                        <p>Build strong DSA foundations with structured lessons, examples, and guided explanations.</p>
                     </button>
-                    <button class="prac">#Practice
-                        <span class="content2">
-                            <p class="in-prac">Click here to solidify DSA concepts through interactive practice quizzes covering diverse topics for comprehensive practice.</p>
-                        </span>
+
+                    <button class="prac">
+                        <h3># Practice</h3>
+                        <p>Sharpen your concepts with topic-wise quizzes and interactive problem solving.</p>
                     </button>
-                    <button class="test">Test{ }
-                        <span class="content3">
-                            <p class="in-test">Click here to prepare for interviews with tailored coding questions spanning different difficulty levels and DSA topics."</p>
-                        </span>
+
+                    <button class="test">
+                        <h3>Test { }</h3>
+                        <p>Prepare for interviews with curated questions across multiple difficulty levels.</p>
                     </button>
+
                 </div>
             </section>
         </div>
@@ -48,4 +51,64 @@
 
 
 </html>
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCanvas</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="wrapper">
+        <div class="container">
+            <header class="head">
+                <div class="nav-left">
+                    <span>Home</span>
+                    <span>About us</span>
+                </div>
+                <div class="nav-right">
+                    <button class="login">Login</button>
+                    <button class="signup">Sign up</button>
+                </div>
+            </header>
 
+            <section class="hero main">
+                <h1 class="cc">CodeCanvas</h1>
+                <p class="hero-subtitle">
+                    Master Data Structures & Algorithms • Crack Top Tech Interviews in 2026
+                </p>
+
+                <div class="hero-cta">
+                    <a href="/signup" class="btn-primary">Start Learning Free →</a>
+                    <a href="/learn" class="btn-secondary">Explore Topics</a>
+                </div>
+
+                <div class="feature-cards">
+                    <a href="/learn" class="card learn">
+                        <h3>// Learn</h3>
+                        <p>Build rock-solid DSA foundations with clear lessons, visuals, examples & guided walkthroughs.</p>
+                    </a>
+
+                    <a href="/practice" class="card prac">
+                        <h3># Practice</h3>
+                        <p>Solve topic-wise problems, quizzes & interactive challenges with instant feedback.</p>
+                    </a>
+
+                    <a href="/test" class="card test">
+                        <h3>Test { }</h3>
+                        <p>Simulate real interviews with curated questions, timed tests & difficulty progression.</p>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Optional: subtle particles background (add JS library like particles.js later if you want) -->
+    <!-- <div id="particles-js"></div> -->
+
+    <script src="/app.js"></script>
+</body>
+</html>

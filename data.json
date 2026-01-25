@@ -1,686 +1,704 @@
 {
-    "array-insertion": {
-      "type": "array-insertion",
-      "desc": [
-        "An array is like a shelf where you can store and organize your books in a row. Each spot on the shelf has a number, so you can easily find and access any book you want by its number. In the same way, an array is a collection of items (like numbers, letters, or even other arrays) stored in a row, and each item has a specific position, called an index, that you can use to find it. This makes it very handy for keeping things in order and quickly accessing them whenever you need to.",
-        "An array is a fundamental data structure used to store a collection of elements, typically of the same data type, in a contiguous block of memory. Arrays are used to organize data so that a related set of values can be easily sorted or searched. Each element in an array is identified by at least one array index or key. The simplicity of this structure allows for efficient access to individual elements as their positions can be calculated using the base address of the array and the element's index."
-      ],
-      "algo": [
-        "Step 1: Check for Space- Static Array: Ensure there's at least one empty slot. Dynamic Array: If the array is full, it automatically resizes.",
-        "Step 2: Validate the Insertion Position- Ensure the position where you want to insert the new element is valid (not less than 0 or greater than the current number of elements).",
-        "Step 3: Shift Elements to the Right- Move each element one position to the right, starting from the last element up to the position where the new element will be inserted. This step makes space for the new element.",
-        "Step 4: Insert the New Element- Place the new element in the position that was made free by shifting elements.",
-        "Step 5: Adjust the Size (if needed)- If you're keeping track of the number of elements (like in a static array), update this count to include the new element."
-      ],
-      "animation": "arrayins.mp4",
-      "code": [
-        "if position is valid:",
-        "   if array is not full (or can resize):",
-        "       for i from array.length down to position + 1:",
-        "           array[i] = array[i - 1]",
-        "       array[position] = value",
-        "   else:",
-        "       print 'Array is full'",
-        "else:",
-        "   print 'Invalid position'"
-      ]
-    },
-  
-  
-    "array-deletion": {
-        "type": "array-deletion",
-        "desc": [
-          "An array is like a shelf where you can store and organize your books in a row. Each spot on the shelf has a number, so you can easily find and access any book you want by its number. In the same way, an array is a collection of items (like numbers, letters, or even other arrays) stored in a row, and each item has a specific position, called an index, that you can use to find it. This makes it very handy for keeping things in order and quickly accessing them whenever you need to.",
-          "An array is a fundamental data structure used to store a collection of elements, typically of the same data type, in a contiguous block of memory. Arrays are used to organize data so that a related set of values can be easily sorted or searched. Each element in an array is identified by at least one array index or key. The simplicity of this structure allows for efficient access to individual elements as their positions can be calculated using the base address of the array and the element's index."
-        ],
-        "algo": [
-          "Step 1: Make sure the position of the element you want to delete is within the array bounds.",
-          "Step 2: For every element after the deletion point, move it one spot to the left. This covers the gap left by the deleted element.",
-          "Step 3: If applicable, decrease the count of elements in the array by one. For fixed-size arrays, you might set the last element to a default value if needed."  
-        ],
-        "animation": "arraydel.mp4",
-        "code": [
-          "if position is within array bounds:",
-          "...for i from position to array.length - 2:",
-          "......array[i] = array[i + 1]",
-          "...reduce array size or set last element to default",
-          "else:",
-          "...indicate 'Invalid position'"
-        ]
-      },
-  
-    "linkedlist-insertion": {
-      "type": "linkedlist-insertion",
-      "desc": [
+  "array-insertion": {
+    "type": "array-insertion",
+    "desc": [
+      "An array is like a shelf where you can store and organize your books in a row. Each spot on the shelf has a number, so you can easily find and access any book you want by its number. In the same way, an array is a collection of items (like numbers, letters, or even other arrays) stored in a row, and each item has a specific position, called an index, that you can use to find it. This makes it very handy for keeping things in order and quickly accessing them whenever you need to.",
+      "An array is a fundamental data structure used to store a collection of elements, typically of the same data type, in a contiguous block of memory. Arrays are used to organize data so that a related set of values can be easily sorted or searched. Each element in an array is identified by at least one array index or key. The simplicity of this structure allows for efficient access to individual elements as their positions can be calculated using the base address of the array and the element's index."
+    ],
+    "algo": [
+      "Step 1: Check for Space- Static Array: Ensure there's at least one empty slot. Dynamic Array: If the array is full, it automatically resizes.",
+      "Step 2: Validate the Insertion Position- Ensure the position where you want to insert the new element is valid (not less than 0 or greater than the current number of elements).",
+      "Step 3: Shift Elements to the Right- Move each element one position to the right, starting from the last element up to the position where the new element will be inserted. This step makes space for the new element.",
+      "Step 4: Insert the New Element- Place the new element in the position that was made free by shifting elements.",
+      "Step 5: Adjust the Size (if needed)- If you're keeping track of the number of elements (like in a static array), update this count to include the new element."
+    ],
+    "animation": "arrayins.mp4",
+    "code": [
+      "if position is valid:",
+      "    if array is not full (or can resize):",
+      "        for i from array.length down to position + 1:",
+      "            array[i] = array[i - 1]",
+      "        array[position] = value",
+      "    else:",
+      "        print 'Array is full'",
+      "else:",
+      "    print 'Invalid position'"
+    ]
+  },
+
+  "array-deletion": {
+    "type": "array-deletion",
+    "desc": [
+      "An array is like a shelf where you can store and organize your books in a row. Each spot on the shelf has a number, so you can easily find and access any book you want by its number. In the same way, an array is a collection of items (like numbers, letters, or even other arrays) stored in a row, and each item has a specific position, called an index, that you can use to find it. This makes it very handy for keeping things in order and quickly accessing them whenever you need to.",
+      "An array is a fundamental data structure used to store a collection of elements, typically of the same data type, in a contiguous block of memory. Arrays are used to organize data so that a related set of values can be easily sorted or searched. Each element in an array is identified by at least one array index or key. The simplicity of this structure allows for efficient access to individual elements as their positions can be calculated using the base address of the array and the element's index."
+    ],
+    "algo": [
+      "Step 1: Make sure the position of the element you want to delete is within the array bounds.",
+      "Step 2: For every element after the deletion point, move it one spot to the left. This covers the gap left by the deleted element.",
+      "Step 3: If applicable, decrease the count of elements in the array by one. For fixed-size arrays, you might set the last element to a default value if needed."
+    ],
+    "animation": "arraydel.mp4",
+    "code": [
+      "if position is within array bounds:",
+      "    for i from position to array.length - 2:",
+      "        array[i] = array[i + 1]",
+      "    reduce array size or set last element to default",
+      "else:",
+      "    indicate 'Invalid position'"
+    ]
+  },
+
+  "linkedlist-insertion": {
+    "type": "linkedlist-insertion",
+    "desc": [
       "A linked list is a linear data structure which can store a collection of 'nodes' connected together via links i.e. pointers. Linked lists nodes are not stored at a contiguous location, rather they are linked using pointers to the different memory locations. A node consists of the data value and a pointer to the address of the next node within the linked list. A linked list is a dynamic linear data structure whose memory size can be allocated or de-allocated at run time based on the operation insertion or deletion, this helps in using system memory efficiently.",
       "A linked list starts with a head node which points to the first node. Every node consists of data which holds the actual data (value) associated with the node and a next pointer which holds the memory address of the next node in the linked list. The last node is called the tail node in the list which points to null indicating the end of the list."
-      ],
-      "algo": [
-        "To insert a node at the start/beginning/front of a Linked List:",
-        "Step 1: Make the first node of Linked List linked to the new node",
-        "Step 2: Remove the head from the original first node of Linked List",
-        "Step 3: Make the new node as the Head of the Linked List.",
-        "To insert a node at the end of a Linked List:",
-        "Step 1: Go to the last node of the Linked List",
-        "Step 2: Change the next pointer of last node from NULL to the new node",
-        "Step 3: Make the next pointer of new node as NULL to show the end of Linked List",
-        "To insert a node after a given node in a Linked List:",
-        "Step 1: Check if the given node exists or not.",
-        "Step 2: If it do not exists, terminate the process. If the given node exists, make the element to be inserted as a new node.",
-        "Step 3: Change the next pointer of given node to the new node",
-        "Step 4: Now shift the original next pointer of given node to the next pointer of new node"
+    ],
+    "algo": [
+      "To insert a node at the start/beginning/front of a Linked List:",
+      "Step 1: Make the first node of Linked List linked to the new node",
+      "Step 2: Remove the head from the original first node of Linked List",
+      "Step 3: Make the new node as the Head of the Linked List.",
+      "To insert a node at the end of a Linked List:",
+      "Step 1: Go to the last node of the Linked List",
+      "Step 2: Change the next pointer of last node from NULL to the new node",
+      "Step 3: Make the next pointer of new node as NULL to show the end of Linked List",
+      "To insert a node after a given node in a Linked List:",
+      "Step 1: Check if the given node exists or not.",
+      "Step 2: If it do not exists, terminate the process. If the given node exists, make the element to be inserted as a new node.",
+      "Step 3: Change the next pointer of given node to the new node",
+      "Step 4: Now shift the original next pointer of given node to the next pointer of new node"
+    ],
+    "animation": "linkedlistinsertion.mp4",
+    "code": [
+      "//Insertion at beginning",
+      "struct node *newNode",
+      "newNode->next = head",
+      "head = newNode",
+      "//Insertion at end",
+      "newNode->next = NULL",
+      "struct node *temp = head",
+      "while(temp->next != NULL){",
+      "    temp = temp->next",
+      "}",
+      "temp->next = newNode",
+      "//Insertion at middle",
+      "for(int i=2; i< position; i++) {",
+      "    if(temp->next!=NULL) {",
+      "        temp = temp->next",
+      "    }",
+      "}",
+      "newNode->next = temp->next",
+      "temp->next = newNode"
+    ]
+  },
 
-      ],
-      "animation": "linkedlistinsertion.mp4",
-      "code": [
-        "//Insertion at beginning",
-        "struct node *newNode",
-        "newNode->next = head",
-        "head = newNode",
-        "//Insertion at end",
-        "newNode->next = NULL",
-        "struct node *temp = head",
-        "while(temp->next != NULL){",
-        "...temp = temp->next",
-        "}",
-        "temp->next = newNode",
-        "//Insertion at middle",
-        "for(int i=2; i< position; i++) {",
-        "...if(temp->next!=NULL) {",
-        "......temp = temp->next",
-        "...}",
-        "}",
-        "newNode->next = temp->next",
-        "temp->next = newNode"
+  "linkedlist-deletion": {
+    "type": "linkedlist-deletion",
+    "desc": [
+      "A linked list is a linear data structure which can store a collection of 'nodes' connected together via links i.e. pointers. Linked lists nodes are not stored at a contiguous location, rather they are linked using pointers to the different memory locations. A node consists of the data value and a pointer to the address of the next node within the linked list. A linked list is a dynamic linear data structure whose memory size can be allocated or de-allocated at run time based on the operation insertion or deletion, this helps in using system memory efficiently.",
+      "A linked list starts with a head node which points to the first node. Every node consists of data which holds the actual data (value) associated with the node and a next pointer which holds the memory address of the next node in the linked list. The last node is called the tail node in the list which points to null indicating the end of the list."
+    ],
+    "algo": [
+      "To delete a node at the start/beginning/front of a Linked List, point head to the second node.",
+      "To delete a node at the end of a Linked List:",
+      "Step 1: Traverse to second last element.",
+      "Step 2: Change its next pointer to null.",
+      "To delete a node after a given node in a Linked List:",
+      "Step 1: Traverse to element before the element to be deleted.",
+      "Step 2: Change next pointers to exclude the node from the chain"
+    ],
+    "animation": "linkedlistdeletion.mp4",
+    "code": [
+      "//Deletion from beginning",
+      "head = head->next",
+      "//Deletion from end",
+      "struct node* temp = head",
+      "while(temp->next->next!=NULL){",
+      "    temp = temp->next",
+      "}",
+      "temp->next = NULL",
+      "//Deletion from middle",
+      "for(int i=2; i< position; i++) {",
+      "    if(temp->next!=NULL) {",
+      "        temp = temp->next",
+      "    }",
+      "}",
+      "temp->next = temp->next->next"
+    ]
+  },
 
-      ]
-    },
-
-    "linkedlist-deletion": {
-      "type": "linkedlist-deletion",
-      "desc": [
-        "A linked list is a linear data structure which can store a collection of 'nodes' connected together via links i.e. pointers. Linked lists nodes are not stored at a contiguous location, rather they are linked using pointers to the different memory locations. A node consists of the data value and a pointer to the address of the next node within the linked list. A linked list is a dynamic linear data structure whose memory size can be allocated or de-allocated at run time based on the operation insertion or deletion, this helps in using system memory efficiently.",
-        "A linked list starts with a head node which points to the first node. Every node consists of data which holds the actual data (value) associated with the node and a next pointer which holds the memory address of the next node in the linked list. The last node is called the tail node in the list which points to null indicating the end of the list."
-      ],
-      "algo": [
-        "To delete a node at the start/beginning/front of a Linked List, point head to the second node.",
-        "To delete a node at the end of a Linked List:",
-        "Step 1: Traverse to second last element.",
-        "Step 2: Change its next pointer to null.",
-        "To delete a node after a given node in a Linked List:",
-        "Step 1: Traverse to element before the element to be deleted.",
-        "Step 2: Change next pointers to exclude the node from the chain"
-      ],
-      "animation": "linkedlistdeletion.mp4",
-      "code": [
-        "//Deletion from beginning",
-        "head = head->next",
-        "//Deletion from end",
-        "struct node* temp = head",
-        "while(temp->next->next!=NULL){",
-        "...temp = temp->next",
-        "} temp->next = NULL",
-        "//Deletion from middle",
-        "for(int i=2; i< position; i++) {",
-        "...if(temp->next!=NULL) {",
-        "......temp = temp->next",
-        "...}",
-        "}",
-        "temp->next = temp->next->next"
-      ]
-    },
-
-
-
-    "bubblesort": {
-      "type": "Bubble Sort",
-      "desc": [
+  "bubblesort": {
+    "type": "Bubble Sort",
+    "desc": [
       "Bubble Sort is a straightforward and intuitive sorting algorithm used to arrange elements in a list or array in ascending or descending order. It operates by comparing adjacent elements and swapping them if they are in the wrong order, gradually pushing larger or smaller elements towards their correct positions. The algorithm gets its name from the way smaller or larger elements 'bubble' to the top or bottom of the list after each iteration.",
       "Bubble Sort is relatively simple to understand and implement, making it suitable for educational purposes or small datasets. However, it is not very efficient for large datasets compared to more advanced sorting algorithms like Quick Sort or Merge Sort, due to its quadratic time complexity, making it impractical for large-scale applications. Despite its inefficiency, it serves as a useful introduction to the concept of sorting algorithms and can be a starting point for understanding more complex sorting techniques.A linked list is a linear data structure which can store a collection of 'nodes' connected together via links i.e. pointers. Linked lists nodes are not stored at a contiguous location, rather they are linked using pointers to the different memory locations. A node consists of the data value and a pointer to the address of the next node within the linked list. A linked list is a dynamic linear data structure whose memory size can be allocated or de-allocated at run time based on the operation insertion or deletion, this helps in using system memory efficiently."
-      ],
-      "algo": [
+    ],
+    "algo": [
       "Step 1: Traverse from left and compare adjacent elements and the higher one is placed at right side.",
       "Step 2: In this way, the largest element is moved to the rightmost end at first.",
       "Step 3: This process is then continued to find the second largest and place it and so on until the data is sorted."
-      ],
-      "animation": "bubblesort.mp4",
-      "code": [
-      "voidbubbleSort(int numbers[], intarray_size){",
-      "...inti, j, temp;",
-      "...for (i = (array_size - 1); i>= 0; i--)",
-      "...for (j = 1; j <= i; j++)",
-      "...if (numbers[j-1] > numbers[j]){",
-      "......temp = numbers[j-1];",
-      "......numbers[j-1] = numbers[j];",
-      "......numbers[j] = temp;",
-      "...}",
+    ],
+    "animation": "bubblesort.mp4",
+    "code": [
+      "void bubbleSort(int numbers[], int array_size){",
+      "    int i, j, temp;",
+      "    for (i = (array_size - 1); i >= 0; i--)",
+      "        for (j = 1; j <= i; j++)",
+      "            if (numbers[j-1] > numbers[j]){",
+      "                temp = numbers[j-1];",
+      "                numbers[j-1] = numbers[j];",
+      "                numbers[j] = temp;",
+      "            }",
       "}"
-      ]
-    },
-  
-
-    "selectionsort": {
-      "type": "Selection Sort",
-      "desc": [
-  "Selection Sort is a simple comparison-based sorting algorithm. It divides the input array into two parts: the sorted sublist at the beginning and the unsorted sublist at the end. Initially, the sorted sublist is empty, while the unsorted sublist contains all elements of the input array.",
-  "The algorithm repeatedly selects the smallest (or largest, depending on the sorting order) element from the unsorted sublist and swaps it with the leftmost unsorted element, effectively expanding the sorted sublist by one element. This process continues iteratively until the entire array is sorted.",
-  "Selection Sort has a time complexity of O(n^2), making it inefficient for large lists, but it's straightforward to implement and requires only a constant amount of additional memory space, making it suitable for small datasets or educational purposes."],
-      "algo": [
-  "Step 1: Go through the array to find the lowest value.",
-  "Step 2: Move the lowest value to the front of the unsorted part of the array.",
-  "Step 3: Go through the array again as many times as there are values in the array."],
-      "animation": "selectionsort.mp4",
-      "code": [
-  "Algorithm: Selection-Sort (A)",
-  "fori← 1 to n-1 do",
-  "...min j ←i;",
-  "...min x ← A[i]",
-  "...for j ←i + 1 to n do",
-  "......if A[j] < min x then",
-  ".........min j ← j",
-  ".........min x ← A[j]",
-  "...A[min j] ← A [i]",
-  "...A[i] ← min x"]
+    ]
   },
-  
+
+  "selectionsort": {
+    "type": "Selection Sort",
+    "desc": [
+      "Selection Sort is a simple comparison-based sorting algorithm. It divides the input array into two parts: the sorted sublist at the beginning and the unsorted sublist at the end. Initially, the sorted sublist is empty, while the unsorted sublist contains all elements of the input array.",
+      "The algorithm repeatedly selects the smallest (or largest, depending on the sorting order) element from the unsorted sublist and swaps it with the leftmost unsorted element, effectively expanding the sorted sublist by one element. This process continues iteratively until the entire array is sorted.",
+      "Selection Sort has a time complexity of O(n^2), making it inefficient for large lists, but it's straightforward to implement and requires only a constant amount of additional memory space, making it suitable for small datasets or educational purposes."
+    ],
+    "algo": [
+      "Step 1: Go through the array to find the lowest value.",
+      "Step 2: Move the lowest value to the front of the unsorted part of the array.",
+      "Step 3: Go through the array again as many times as there are values in the array."
+    ],
+    "animation": "selectionsort.mp4",
+    "code": [
+      "Algorithm: Selection-Sort (A)",
+      "for i ← 1 to n-1 do",
+      "    min j ← i;",
+      "    min x ← A[i]",
+      "    for j ← i + 1 to n do",
+      "        if A[j] < min x then",
+      "            min j ← j",
+      "            min x ← A[j]",
+      "    A[min j] ← A [i]",
+      "    A[i] ← min x"
+    ]
+  },
 
   "insertionsort": {
     "type": "Insertion Sort",
     "desc": [
-"Insertion Sort is a straightforward sorting algorithm that works by repeatedly taking elements from an unsorted part of the array and inserting them into their correct position in a sorted portion of the array. It starts with the second element and compares it with the first, swapping if necessary to ensure the first two elements are in sorted order. Then, it proceeds to the third element, inserting it into the correct position among the first two elements. This process continues until the entire array is sorted. Despite its simplicity, Insertion Sort can be efficient for small arrays or nearly sorted lists due to its adaptive nature, which reduces the number of comparisons and swaps needed.",
-"While Insertion Sort has a time complexity of O(n^2) in the average and worst cases, where 'n' is the number of elements, its performance can be favorable for small datasets or situations where the input is almost sorted. Its simplicity also makes it easy to implement and understand, making it a suitable choice for educational purposes or situations where code clarity is prioritized over speed. However, for large datasets, more efficient sorting algorithms like Merge Sort or Quick Sort are typically preferred due to their superior time complexities."],
+      "Insertion Sort is a straightforward sorting algorithm that works by repeatedly taking elements from an unsorted part of the array and inserting them into their correct position in a sorted portion of the array. It starts with the second element and compares it with the first, swapping if necessary to ensure the first two elements are in sorted order. Then, it proceeds to the third element, inserting it into the correct position among the first two elements. This process continues until the entire array is sorted. Despite its simplicity, Insertion Sort can be efficient for small arrays or nearly sorted lists due to its adaptive nature, which reduces the number of comparisons and swaps needed.",
+      "While Insertion Sort has a time complexity of O(n^2) in the average and worst cases, where 'n' is the number of elements, its performance can be favorable for small datasets or situations where the input is almost sorted. Its simplicity also makes it easy to implement and understand, making it a suitable choice for educational purposes or situations where code clarity is prioritized over speed. However, for large datasets, more efficient sorting algorithms like Merge Sort or Quick Sort are typically preferred due to their superior time complexities."
+    ],
     "algo": [
-"Step 1: We have to start with second element of the array as first element in the array is assumed to be sorted.",
-"Step 2: Compare second element with the first element and check if the second element is smaller then swap them.",
-"Step 3: Move to the third element and compare it with the second element, then the first element and swap as necessary to put it in the correct position among the first three elements",
-"Step 4: Continue this process, comparing each element with the ones before it and swapping as needed to place it in the correct position among the sorted elements",
-"Step 5: Repeat until the entire array is sorted."],
+      "Step 1: We have to start with second element of the array as first element in the array is assumed to be sorted.",
+      "Step 2: Compare second element with the first element and check if the second element is smaller then swap them.",
+      "Step 3: Move to the third element and compare it with the second element, then the first element and swap as necessary to put it in the correct position among the first three elements",
+      "Step 4: Continue this process, comparing each element with the ones before it and swapping as needed to place it in the correct position among the sorted elements",
+      "Step 5: Repeat until the entire array is sorted."
+    ],
     "animation": "insertionsort.mp4",
     "code": [
-"function insertionSort(array)",
-"...for index from 1 to length(array)",
-"......key = array[index]",
-"......j = index - 1",
-"......while j >= 0 and array[j] > key",
-".........array[j + 1] = array[j]",
-".........j = j - 1",
-"......array[j + 1] = key"]
+      "function insertionSort(array)",
+      "    for index from 1 to length(array)",
+      "        key = array[index]",
+      "        j = index - 1",
+      "        while j >= 0 and array[j] > key",
+      "            array[j + 1] = array[j]",
+      "            j = j - 1",
+      "        array[j + 1] = key"
+    ]
   },
-
 
   "mergesort": {
     "type": "Merge Sort",
     "desc": [
-"Merge Sort is a highly efficient, comparison-based sorting algorithm that follows the divide-and-conquer paradigm. The algorithm operates by recursively dividing the unsorted list into smaller sublists until each sublist contains only one element. Then, it merges these sublists in a sorted manner until a single sorted list is achieved. The key step in Merge Sort is the merging process, where two sorted sublists are combined into a single sorted list. This process involves comparing the elements from each sublist and selecting the smallest element to place it in the final sorted list, repeating this process until all elements are merged",
-"One of the significant advantages of Merge Sort is its stable performance, with a time complexity of O(n log n) in all cases. This efficiency makes it suitable for sorting large datasets efficiently. Additionally, Merge Sort is also capable of sorting linked lists efficiently due to its ability to easily merge two sorted linked lists into one. However, Merge Sort does require additional memory space proportional to the size of the input array for the temporary arrays used in the merging process, which might be a limitation for sorting very large arrays in memory-constrained environments. Despite this drawback, Merge Sort's consistent performance and straightforward implementation make it a popular choice for various sorting tasks."],
+      "Merge Sort is a highly efficient, comparison-based sorting algorithm that follows the divide-and-conquer paradigm. The algorithm operates by recursively dividing the unsorted list into smaller sublists until each sublist contains only one element. Then, it merges these sublists in a sorted manner until a single sorted list is achieved. The key step in Merge Sort is the merging process, where two sorted sublists are combined into a single sorted list. This process involves comparing the elements from each sublist and selecting the smallest element to place it in the final sorted list, repeating this process until all elements are merged",
+      "One of the significant advantages of Merge Sort is its stable performance, with a time complexity of O(n log n) in all cases. This efficiency makes it suitable for sorting large datasets efficiently. Additionally, Merge Sort is also capable of sorting linked lists efficiently due to its ability to easily merge two sorted linked lists into one. However, Merge Sort does require additional memory space proportional to the size of the input array for the temporary arrays used in the merging process, which might be a limitation for sorting very large arrays in memory-constrained environments. Despite this drawback, Merge Sort's consistent performance and straightforward implementation make it a popular choice for various sorting tasks."
+    ],
     "algo": [
-"Step 1: Divide the list or array recursively into two halves until it can no more be divided",
-"Step 2: Each subarray is sorted individually using the merge sort algorithm.",
-"Step 3: The sorted subarrays are merged back together in sorted order. The process continues until all elements from both subarrays have been merged."],
+      "Step 1: Divide the list or array recursively into two halves until it can no more be divided",
+      "Step 2: Each subarray is sorted individually using the merge sort algorithm.",
+      "Step 3: The sorted subarrays are merged back together in sorted order. The process continues until all elements from both subarrays have been merged."
+    ],
     "animation": "mergesort.mp4",
     "code": [
-"function mergeSort(array)",
-"...if length of array <= 1",
-"......return array",
-"...middle = length of array / 2",
-"...leftArray = mergeSort(first half of array)",
-"...rightArray = mergeSort(second half of array)",
-"...return merge(leftArray, rightArray)"]
+      "function mergeSort(array)",
+      "    if length of array <= 1",
+      "        return array",
+      "    middle = length of array / 2",
+      "    leftArray = mergeSort(first half of array)",
+      "    rightArray = mergeSort(second half of array)",
+      "    return merge(leftArray, rightArray)"
+    ]
   },
 
-
-    "quicksort": {
-      "type": "Quick Sort",
-      "desc": [
+  "quicksort": {
+    "type": "Quick Sort",
+    "desc": [
       "QuickSort is a sorting algorithm based on the Divide and Conquer algorithm that picks an element as a pivot and partitions the given array around the picked pivot by placing the pivot in its correct position in the sorted array.",
       "The key process in quickSort is a partition(). The target of partitions is to place the pivot (any element can be chosen to be a pivot) at its correct position in the sorted array and put all smaller elements to the left of the pivot, and all greater elements to the right of the pivot."
-      ],
-      "algo": [
-        "Step 1: Choose a pivot element from the array (e.g., the last element).",
-        "Step 2: Partition the array into two sub-arrays: elements less than the pivot and elements greater than or equal to the pivot.",
-        "Step 3: Recursively apply quick sort to the sub-arrays.",
-        "Step 4: Concatenate the sorted sub-arrays and the pivot element to get the final sorted array."
-      ],
-      "animation": "quicksort.mp4",
-      "code": [
-        "function quickSort(arr, low, high)",
-        "...if low < high then",
-        "......pivotIndex = partition(arr, low, high)",
-        "......quickSort(arr, low, pivotIndex - 1)",
-        "......quickSort(arr, pivotIndex + 1, high)",
-        "function partition(arr, low, high)",
-        "...pivot = arr[high]",
-        "...i = low - 1",
-        "...for j = low to high - 1",
-        "......if arr[j] < pivot then",
-        ".........i = i + 1",
-        ".........swap arr[i] and arr[j]",
-        "...swap arr[i + 1] and arr[high]",
-        "...return i + 1"
-  
-  
-      ]
-    },
-  
+    ],
+    "algo": [
+      "Step 1: Choose a pivot element from the array (e.g., the last element).",
+      "Step 2: Partition the array into two sub-arrays: elements less than the pivot and elements greater than or equal to the pivot.",
+      "Step 3: Recursively apply quick sort to the sub-arrays.",
+      "Step 4: Concatenate the sorted sub-arrays and the pivot element to get the final sorted array."
+    ],
+    "animation": "quicksort.mp4",
+    "code": [
+      "function quickSort(arr, low, high)",
+      "    if low < high then",
+      "        pivotIndex = partition(arr, low, high)",
+      "        quickSort(arr, low, pivotIndex - 1)",
+      "        quickSort(arr, pivotIndex + 1, high)",
+      "function partition(arr, low, high)",
+      "    pivot = arr[high]",
+      "    i = low - 1",
+      "    for j = low to high - 1",
+      "        if arr[j] < pivot then",
+      "            i = i + 1",
+      "            swap arr[i] and arr[j]",
+      "    swap arr[i + 1] and arr[high]",
+      "    return i + 1"
+    ]
+  },
 
-    "searchlinear": {
-      "type": "searchlinear",
-      "desc": [
-        "Linear Search is defined as a sequential search algorithm that starts at one end and goes through each element of a list until the desired element is found, otherwise the search continues till the end of the data set.",
-        "It is widely used to search an element from the unordered list, i.e., the list in which items are not sorted. The worst-case time complexity of linear search is O(n)."
-      ],
-      "algo": [
-        "Step 1: First, we have to traverse the array elements using a for loop.",
-        "Step 2: In each iteration of for loop, compare the search element with the current array element, If the element matches, then return the index of the corresponding array element. If the element does not match, then move to the next element.",
-        "Step 3: If there is no match or the search element is not present in the given array, return -1."
-      ],
-      "animation": "searchlinear.mp4",
-      "code": [
-        "function linearSearch(arr, key)",
-        "...for each index i in arr do",
-        "......if arr[i] equals key then",
-        ".........return i // Return the index if key is found",
-        "...return -1 // Return -1 if key is not found"
-      ]
-    },
-  
-  
+  "searchlinear": {
+    "type": "searchlinear",
+    "desc": [
+      "Linear Search is defined as a sequential search algorithm that starts at one end and goes through each element of a list until the desired element is found, otherwise the search continues till the end of the data set.",
+      "It is widely used to search an element from the unordered list, i.e., the list in which items are not sorted. The worst-case time complexity of linear search is O(n)."
+    ],
+    "algo": [
+      "Step 1: First, we have to traverse the array elements using a for loop.",
+      "Step 2: In each iteration of for loop, compare the search element with the current array element, If the element matches, then return the index of the corresponding array element. If the element does not match, then move to the next element.",
+      "Step 3: If there is no match or the search element is not present in the given array, return -1."
+    ],
+    "animation": "searchlinear.mp4",
+    "code": [
+      "function linearSearch(arr, key)",
+      "    for each index i in arr do",
+      "        if arr[i] equals key then",
+      "            return i // Return the index if key is found",
+      "    return -1 // Return -1 if key is not found"
+    ]
+  },
 
-    "searchbinary": {
-      "type": "searchbinary",
-      "desc": "this is where desc of linked list will go",
-      "algo": "algo for linked list will ho here",
-      "animation": "animation for linked list goes here",
-      "code": "and finally code for linked list"
-    },
+  "searchbinary": {
+    "type": "Binary Search",
+    "desc": [
+      "Binary Search is an efficient searching algorithm that finds the position of a target value within a **sorted** array. It works by repeatedly dividing the search interval in half. If the value is less than the middle element, the search continues in the lower half; otherwise, it continues in the upper half. This process continues until the value is found or the interval becomes empty.",
+      "Binary Search has a time complexity of O(log n), making it significantly faster than linear search (O(n)) for large sorted datasets. However, it requires the array to be sorted beforehand — if the data is unsorted, you must sort it first (which adds O(n log n) time). It is widely used in computer science, databases, and efficient lookup operations."
+    ],
+    "algo": [
+      "Step 1: Ensure the array is sorted in ascending order.",
+      "Step 2: Initialize two pointers: low = 0 (start of array) and high = array.length - 1 (end of array).",
+      "Step 3: While low <= high (search space is not empty):",
+      "    Step 3.1: Calculate the middle index: mid = low + (high - low) / 2",
+      "    Step 3.2: Compare the middle element with the target:",
+      "        - If array[mid] == target → return mid (target found)",
+      "        - If array[mid] < target → search right half: low = mid + 1",
+      "        - If array[mid] > target → search left half: high = mid - 1",
+      "Step 4: If the loop ends without finding the target, return -1 (target not found)."
+    ],
+    "animation": "binarysearch.mp4",
+    "code": [
+      "function binarySearch(array, target):",
+      "    let low = 0",
+      "    let high = array.length - 1",
+      "    while low <= high:",
+      "        let mid = low + Math.floor((high - low) / 2)",
+      "        if array[mid] === target:",
+      "            return mid",
+      "        else if array[mid] < target:",
+      "            low = mid + 1",
+      "        else:",
+      "            high = mid - 1",
+      "    return -1  // Target not found"
+    ]
+  },
 
-    "stack": {
-      "type": "Stacks",
-      "desc": ["Stack is a linear data structure that follows a particular order in which the operations are performed. The order may be LIFO(Last In First Out) or FILO(First In Last Out).",
+  "stack": {
+    "type": "Stacks",
+    "desc": [
+      "Stack is a linear data structure that follows a particular order in which the operations are performed. The order may be LIFO(Last In First Out) or FILO(First In Last Out).",
       "LIFO implies that the element that is inserted last, comes out first and FILO implies that the element that is inserted first, comes out last. It behaves like a stack of plates, where the last plate added is the first one to be removed."
-      ],
-
-      "algo": ["Push: Adds an element to the top of the stack.",
+    ],
+    "algo": [
+      "Push: Adds an element to the top of the stack.",
       "Pop: Removes the top element from the stack.",
       "Peek: Returns the top element without removing it.",
       "IsEmpty: Checks if the stack is empty.",
       "IsFull: Checks if the stack is full (in case of fixed-size arrays)."
-      ],
-
-      "animation": "stack.mp4",
-      "code": [
+    ],
+    "animation": "stack.mp4",
+    "code": [
       "CLASS Stack",
-      "...PRIVATE DynamicArray stackArray",
-      "...CONSTRUCTOR",
-      "......Initialize stackArray to an empty array",
-      "... FUNCTION push(element)",
-      "......Append element to the end of stackArray",
-      "...FUNCTION pop()",
-      "......IF isEmpty() THEN",
-      ".........OUTPUT 'Error: Stack Underflow' (or handle underflow appropriately)",
-      ".........RETURN NULL",
-      "......ELSE",
-      ".........Set element = the last item of stackArray",
-      ".........Remove the last item from stackArray",
-      ".........RETURN element",
-      "...FUNCTION peek()",
-      "......IF isEmpty() THEN",
-      ".........OUTPUT 'Error: Stack is empty' (or handle empty stack appropriately)",
-      ".........RETURN NULL",
-      "......ELSE",
-      ".........RETURN the last item of stackArray",
-      "...FUNCTION isEmpty()",
-      "......IF size of stackArray == 0 THEN",
-      ".........RETURN TRUE",
-      "......ELSE",
-      ".........RETURN FALSE",
-      "...FUNCTION size()",
-      "......RETURN the number of elements in stackArray"
-      ]
-    },
+      "    PRIVATE DynamicArray stackArray",
+      "    CONSTRUCTOR",
+      "        Initialize stackArray to an empty array",
+      "    FUNCTION push(element)",
+      "        Append element to the end of stackArray",
+      "    FUNCTION pop()",
+      "        IF isEmpty() THEN",
+      "            OUTPUT 'Error: Stack Underflow' (or handle underflow appropriately)",
+      "            RETURN NULL",
+      "        ELSE",
+      "            Set element = the last item of stackArray",
+      "            Remove the last item from stackArray",
+      "            RETURN element",
+      "    FUNCTION peek()",
+      "        IF isEmpty() THEN",
+      "            OUTPUT 'Error: Stack is empty' (or handle empty stack appropriately)",
+      "            RETURN NULL",
+      "        ELSE",
+      "            RETURN the last item of stackArray",
+      "    FUNCTION isEmpty()",
+      "        IF size of stackArray == 0 THEN",
+      "            RETURN TRUE",
+      "        ELSE",
+      "            RETURN FALSE",
+      "    FUNCTION size()",
+      "        RETURN the number of elements in stackArray"
+    ]
+  },
 
-    "queue": {
-      "type": "Queues",
-      "desc": [
+  "queue": {
+    "type": "Queues",
+    "desc": [
       "A Queue Data Structure is a fundamental concept in computer science used for storing and managing data in a specific order. It follows the principle of “First in, First out” (FIFO), where the first element added to the queue is the first one to be removed.",
       "Queues are commonly used in various algorithms and applications for their simplicity and efficiency in managing data flow."
-      ],
-      "algo": [
+    ],
+    "algo": [
       "Enqueue (Insert): Adds an element to the rear of the queue.",
       "Dequeue (Delete): Removes and returns the element from the front of the queue.",
       "Peek: Returns the element at the front of the queue without removing it.",
       "isEmpty: Checks if the queue is empty.",
       "isFull: Checks if the queue is full."
-      ],
-      "animation": "queue.mp4",
-      "code": [
+    ],
+    "animation": "queue.mp4",
+    "code": [
       "CLASS Queue",
-      "...PRIVATE DynamicArray queueArray",
-      "...CONSTRUCTOR",
-      "......Initialize queueArray to an empty array",
-      "...FUNCTION enqueue(element)",
-      "......Append element to the end of queueArray",
-      "...FUNCTION dequeue()",
-      "......IF isEmpty() THEN",
-      ".........OUTPUT 'Error: Queue Underflow' (or handle underflow appropriately)",
-      ".........RETURN NULL",
-      "......ELSE",
-      ".........Set element = the first item of queueArray",
-      ".........Remove the first item from queueArray",
-      ".........RETURN element",
-      "...FUNCTION peek()",
-      "......IF isEmpty() THEN",
-      ".........OUTPUT 'Error: Queue is empty' (or handle empty queue appropriately)",
-      ".........RETURN NULL",
-      "......ELSE",
-      ".........RETURN the first item of queueArray",
-      "...FUNCTION isEmpty()",
-      "......IF size of queueArray == 0 THEN",
-      ".........RETURN TRUE",
-      "......ELSE",
-      ".........RETURN FALSE",
-      "...FUNCTION size()",
-      "......RETURN the number of elements in queueArray"
-      ]
-    },
+      "    PRIVATE DynamicArray queueArray",
+      "    CONSTRUCTOR",
+      "        Initialize queueArray to an empty array",
+      "    FUNCTION enqueue(element)",
+      "        Append element to the end of queueArray",
+      "    FUNCTION dequeue()",
+      "        IF isEmpty() THEN",
+      "            OUTPUT 'Error: Queue Underflow' (or handle underflow appropriately)",
+      "            RETURN NULL",
+      "        ELSE",
+      "            Set element = the first item of queueArray",
+      "            Remove the first item from queueArray",
+      "            RETURN element",
+      "    FUNCTION peek()",
+      "        IF isEmpty() THEN",
+      "            OUTPUT 'Error: Queue is empty' (or handle empty queue appropriately)",
+      "            RETURN NULL",
+      "        ELSE",
+      "            RETURN the first item of queueArray",
+      "    FUNCTION isEmpty()",
+      "        IF size of queueArray == 0 THEN",
+      "            RETURN TRUE",
+      "        ELSE",
+      "            RETURN FALSE",
+      "    FUNCTION size()",
+      "        RETURN the number of elements in queueArray"
+    ]
+  },
 
-    "binarytreetraversalDFS": {
-      "type": "DFS Travesal in Binary Tree",
-      "desc": [
+  "binarytreetraversalDFS": {
+    "type": "DFS Travesal in Binary Tree",
+    "desc": [
       "Depth-First Search (DFS) is a versatile graph traversal algorithm used to explore and analyze graphs or trees. When applied to a binary tree, DFS explores the tree by traversing down one branch as deeply as possible before backtracking. The Preorder traversal, a variant of DFS, starts at the root node and visits each node before exploring its children.",
       "This traversal method offers simplicity and efficiency, making it widely used in various applications such as searching, pathfinding, and tree manipulation."
-      ],
-      "algo": [
+    ],
+    "algo": [
       "Step 1: Start at the root node.",
       "Step 2: Visit the current node.",
       "Step 3: Recur on the left subtree.",
       "Step 4: Recur on the left subtree."
-      ],
-      "animation": "binarytreetraversalDFS.mp4",
-      "code": [
+    ],
+    "animation": "binarytreetraversalDFS.mp4",
+    "code": [
       "PreorderTraversal(node)",
-      "...if the node is not null",
-      "......Visit(node)",
-      "......PreorderTraversal(node.left)",
-      "......PreorderTraversal(node.right)"
-      ]
-    },
+      "    if the node is not null",
+      "        Visit(node)",
+      "        PreorderTraversal(node.left)",
+      "        PreorderTraversal(node.right)"
+    ]
+  },
 
-    "binarytreetraversalBFS": {
-      "type": "BFS Travesal in Binary Tree",
-      "desc": [
+  "binarytreetraversalBFS": {
+    "type": "BFS Travesal in Binary Tree",
+    "desc": [
       "Breadth-First Search (BFS) is a graph traversal algorithm that explores a tree level by level. When applied to a binary tree, BFS starts at the root node and explores all the nodes at the current level before moving to the next level. This exploration continues until all nodes are visited. BFS ensures that nodes are visited in increasing order of their depth from the root.",
       "This traversal method is useful for tasks such as finding the shortest path, level-order tree traversal, and solving puzzles like finding the shortest solution in a maze."
-      ],
-      "algo": [
+    ],
+    "algo": [
       "Step 1: Start at the root node.",
       "Step 2: Enqueue the root node into a queue.",
       "Step 3: While the queue is not empty: (i) Dequeue a node from the queue. (ii) Visit the dequeued node. (iii) Enqueue its left child (if exists). (iv)Enqueue its right child (if exists)."
-      ],
-      "animation": "binarytreetraversalBFS.mp4",
-      "code": [
+    ],
+    "animation": "binarytreetraversalBFS.mp4",
+    "code": [
       "Create a queue Q.",
       "Enqueue the root node into Q.",
       "while Q is not empty,",
-      "Dequeue a node from Q.",
-      "Visit the dequeued node.",
-      "if node has left child, enqueue left child into Q.",
-      "if node has right child, enqueue right child into Q."
-      ]
-    },
+      "    Dequeue a node from Q.",
+      "    Visit the dequeued node.",
+      "    if node has left child, enqueue left child into Q.",
+      "    if node has right child, enqueue right child into Q."
+    ]
+  },
 
-    "binarytreeinsertion": {
-      "type": "Insetion in Binary Tree",
-      "desc": [
+  "binarytreeinsertion": {
+    "type": "Insetion in Binary Tree",
+    "desc": [
       "Inserting a new node into a Binary Search Tree (BST) involves finding the appropriate position for the new node based on its value and maintaining the BST property. Starting from the root, the algorithm compares the value of the new node with the value of the current node. If the new node's value is smaller, the algorithm moves to the left child; if it's larger, it moves to the right child.",
       "This process continues recursively until a suitable empty position (leaf node) is found. Once found, the new node is inserted as a child of the current node, either as the left or right child, depending on its value. Insertion in a BST has an average time complexity of O(log n) for balanced trees, but it can degrade to O(n) for skewed trees."
-      ],
-      "algo": [
+    ],
+    "algo": [
       "Step 1: Start at the root node.",
       "Step 2: If the tree is empty, create a new node with the given value and set it as the root.",
       "Step 3: If the value to be inserted is less than the current node's value, move to the left subtree.",
       "Step 4: If the value to be inserted is greater than the current node's value, move to the right subtree.",
       "Step 5: Repeat steps 3-4 until a suitable empty position (leaf node) is found.",
       "Step 6: Create a new node with the given value and insert it as a child of the appropriate leaf node."
-      ],
-      "animation": "binarytreeinsertion.mp4",
-      "code": [
+    ],
+    "animation": "binarytreeinsertion.mp4",
+    "code": [
       "Insert(root, value)",
-      "...if root is null",
-      "......root = new Node(value)",
-      "...else if value < root.value",
-      "......root.left = Insert(root.left, value)",
-      "...else if value > root.value",
-      "......root.right = Insert(root.right, value)",
-      "...return root"
-      ]
-    },
+      "    if root is null",
+      "        root = new Node(value)",
+      "    else if value < root.value",
+      "        root.left = Insert(root.left, value)",
+      "    else if value > root.value",
+      "        root.right = Insert(root.right, value)",
+      "    return root"
+    ]
+  },
 
-    "binarytreedeletion": {
-      "type": "Deletion in Binary Tree",
-      "desc": [
+  "binarytreedeletion": {
+    "type": "Deletion in Binary Tree",
+    "desc": [
       "Deleting a node from a Binary Search Tree (BST) requires handling three cases: a node with no children, a node with one child, and a node with two children. In the case of a node with no children, the node is simply removed from the tree. If the node has one child, the child node replaces the deleted node in the tree. When the node has two children, the algorithm finds the node's in-order successor (or predecessor), typically the smallest (or largest) node in its right (or left) subtree.",
       "The value of the successor node is copied to the node to be deleted, and then the successor node is recursively deleted from its original position. This ensures that the BST property is maintained after deletion. Deletion in a BST has an average time complexity of O(log n) for balanced trees, but it can degrade to O(n) for skewed trees."
-      ],
-      "algo": [
+    ],
+    "algo": [
       "Step 1: Start at the root node.",
       "Step 2: If the tree is empty, return null.",
       "Step 3: If the value to be deleted is less than the current node's value, recursively delete the node from the left subtree.",
       "Step 4: If the value to be deleted is greater than the current node's value, recursively delete the node from the right subtree.",
       "Step 5: If the value to be deleted is equal to the current node's value, handle three cases: If the node has no children, simply remove the node. If the node has one child, replace the node with its child. If the node has two children, find the in-order successor (or predecessor), replace the node's value with the successor's value, and recursively delete the successor node.",
       "Step 6: Return the modified tree."
-      ],
-      "animation": "binarytreedeletion.mp4",
-      "code": [
+    ],
+    "animation": "binarytreedeletion.mp4",
+    "code": [
       "Delete(root, value)",
       "if root is null",
-      "...return root",
+      "    return root",
       "if value < root.value",
-      "...root.left = Delete(root.left, value)",
+      "    root.left = Delete(root.left, value)",
       "else if value > root.value",
-      "...root.right = Delete(root.right, value)",
+      "    root.right = Delete(root.right, value)",
       "else",
-      "...if root.left is null",
-      ".......temp = root.right",
-      ".......return temp",
-      "...else if root.right is null",
-      ".......temp = root.left",
-      ".......return temp",
-      "...temp = FindMin(root.right)",
-      "...root.value = temp.value",
-      "...root.right = Delete(root.right, temp.value)",
+      "    if root.left is null",
+      "        temp = root.right",
+      "        return temp",
+      "    else if root.right is null",
+      "        temp = root.left",
+      "        return temp",
+      "    temp = FindMin(root.right)",
+      "    root.value = temp.value",
+      "    root.right = Delete(root.right, temp.value)",
       "return root"
-      ]
-    },
+    ]
+  },
 
-    "binarysearchtreeinsertion": {
-      "type": "Insertion in Binary Search Tree",
-      "desc": [
+  "binarysearchtreeinsertion": {
+    "type": "Insertion in Binary Search Tree",
+    "desc": [
       "Searching for a value in a Binary Search Tree (BST) involves traversing the tree recursively, starting from the root node. At each step, the algorithm compares the value to be searched with the value of the current node. If the values match, the algorithm terminates, indicating that the value is found. If the value is smaller than the current node's value, the algorithm moves to the left subtree; if it's larger, it moves to the right subtree.",
       "This process continues until a leaf node is reached (indicating the value is not in the tree) or until the value is found. Searching in a BST has an average time complexity of O(log n) for balanced trees, but it can degrade to O(n) for skewed trees."
-      ],
-      "algo": [
+    ],
+    "algo": [
       "Step 1: Start at the root node.",
       "Step 2: If the tree is empty or the current node's value is equal to the value being searched, return the current node.",
       "Step 3: If the value being searched is less than the current node's value, recursively search the left subtree.",
       "Step 4: If the value being searched is greater than the current node's value, recursively search the right subtree.",
       "Step 5: Repeat steps 2-4 until a leaf node is reached (indicating the value is not in the tree) or until the value is found.",
       "Step 6: Return the node containing the value, if found; otherwise, return null."
-      ],
-      "animation": "binarysearchtreeinsertion.mp4",
-      "code": [
+    ],
+    "animation": "binarysearchtreeinsertion.mp4",
+    "code": [
       "Search(root, value)",
       "if root is null or root.value is equal to value",
-      "...return root",
+      "    return root",
       "if value < root.value",
-      "...return Search(root.left, value)",
+      "    return Search(root.left, value)",
       "return Search(root.right, value)"
-      ]
-    },
+    ]
+  },
 
-
-    "binarysearchtreedeletion": {
-      "type": "Deletion in Binary Search Tree",
-      "desc": [
+  "binarysearchtreedeletion": {
+    "type": "Deletion in Binary Search Tree",
+    "desc": [
       "Deleting a node from a Binary Search Tree (BST) requires handling three cases: a node with no children, a node with one child, and a node with two children. In the case of a node with no children, the node is simply removed from the tree. If the node has one child, the child node replaces the deleted node in the tree. When the node has two children, the algorithm finds the node's in-order successor (or predecessor), typically the smallest (or largest) node in its right (or left) subtree.",
       "The value of the successor node is copied to the node to be deleted, and then the successor node is recursively deleted from its original position. This ensures that the BST property is maintained after deletion. Deletion in a BST has an average time complexity of O(log n) for balanced trees, but it can degrade to O(n) for skewed trees."
-      ],
-      "algo": [
+    ],
+    "algo": [
       "Step 1: Start at the root node.",
       "Step 2: If the tree is empty, return null.",
       "Step 3: If the value to be deleted is less than the current node's value, recursively delete the node from the left subtree.",
       "Step 4: If the value to be deleted is greater than the current node's value, recursively delete the node from the right subtree.",
       "Step 5: If the value to be deleted is equal to the current node's value, handle three cases: If the node has no children, simply remove the node. If the node has one child, replace the node with its child. If the node has two children, find the in-order successor (or predecessor), replace the node's value with the successor's value, and recursively delete the successor node.",
       "Step 6: Return the modified tree."
-      ],
-      "animation": "binarysearchtreedeletion.mp4",
-      "code": [
+    ],
+    "animation": "binarysearchtreedeletion.mp4",
+    "code": [
       "Delete(root, value)",
       "if root is null",
-      "...return root",
+      "    return root",
       "if value < root.value",
-      "...root.left = Delete(root.left, value)",
+      "    root.left = Delete(root.left, value)",
       "else if value > root.value",
-      "...root.right = Delete(root.right, value)",
+      "    root.right = Delete(root.right, value)",
       "else",
-      "...if root.left is null",
-      "......temp = root.right",
-      "......return temp",
-      "...else if root.right is null",
-      "......temp = root.left",
-      "......return temp",
-      "...temp = FindMin(root.right)",
-      "...root.value = temp.value",
-      "...root.right = Delete(root.right, temp.value)",
+      "    if root.left is null",
+      "        temp = root.right",
+      "        return temp",
+      "    else if root.right is null",
+      "        temp = root.left",
+      "        return temp",
+      "    temp = FindMin(root.right)",
+      "    root.value = temp.value",
+      "    root.right = Delete(root.right, temp.value)",
       "return root"
-     
-      ]
-    },
+    ]
+  },
 
-    "binarysearchtreesearching": {
-      "type": "Searching in Binary Search Tree",
-      "desc": [
+  "binarysearchtreesearching": {
+    "type": "Searching in Binary Search Tree",
+    "desc": [
       "Searching a node from a Binary Search Tree (BST) requires handling three cases: a node with no children, a node with one child, and a node with two children. In the case of a node with no children, the node is simply removed from the tree. If the node has one child, the child node replaces the deleted node in the tree. When the node has two children, the algorithm finds the node's in-order successor (or predecessor), typically the smallest (or largest) node in its right (or left) subtree.",
       "The value of the successor node is copied to the node to be deleted, and then the successor node is recursively deleted from its original position. This ensures that the BST property is maintained after deletion. Deletion in a BST has an average time complexity of O(log n) for balanced trees, but it can degrade to O(n) for skewed trees."
-      ],
-      "algo": [
+    ],
+    "algo": [
       "Step 1: Start at the root node.",
       "Step 2: If the tree is empty, return null.",
       "Step 3: If the value to be deleted is less than the current node's value, recursively delete the node from the left subtree.",
       "Step 4: If the value to be deleted is greater than the current node's value, recursively delete the node from the right subtree.",
       "Step 5: If the value to be deleted is equal to the current node's value, handle three cases: If the node has no children, simply remove the node. If the node has one child, replace the node with its child. If the node has two children, find the in-order successor (or predecessor), replace the node's value with the successor's value, and recursively delete the successor node.",
       "Step 6: Return the modified tree."
-      ],
-      "animation": "binarysearchtreesearching.mp4",
-      "code": [
+    ],
+    "animation": "binarysearchtreesearching.mp4",
+    "code": [
       "Search(root, value)",
       "if root is null",
-      "...return root",
+      "    return root",
       "if value < root.value",
-      "...root.left = Search(root.left, value)",
+      "    root.left = Search(root.left, value)",
       "else if value > root.value",
-      "...root.right = Search(root.right, value)",
+      "    root.right = Search(root.right, value)",
       "else",
-      "...if root.left is null",
-      "......temp = root.right",
-      "......return temp",
-      "...else if root.right is null",
-      "......temp = root.left",
-      "......return temp",
-      "...temp = FindMin(root.right)",
-      "...root.value = temp.value",
-      "...root.right = Search(root.right, temp.value)",
+      "    if root.left is null",
+      "        temp = root.right",
+      "        return temp",
+      "    else if root.right is null",
+      "        temp = root.left",
+      "        return temp",
+      "    temp = FindMin(root.right)",
+      "    root.value = temp.value",
+      "    root.right = Search(root.right, temp.value)",
       "return root"
-     
-      ]
-    },
+    ]
+  },
 
-
-    "graphbfs": {
-      "type": "BFS in Graph",
-      "desc": [
+  "graphbfs": {
+    "type": "BFS in Graph",
+    "desc": [
       "Breadth-First Search (BFS) is a fundamental algorithm used for traversing or searching tree or graph data structures. It's a powerful tool for exploring the structure of networks, finding the shortest path between nodes, and much more.",
       "BFS is a systematic way to explore a graph by starting at a particular node and visiting all of its neighbors at the present depth level before moving on to the nodes at the next depth level. This ensures that nodes are visited in the order of their distance from the starting node.",
       "Breadth-First Search (BFS) is a versatile algorithm with various applications in graph theory, network analysis, and computer science in general. By systematically exploring the nodes of a graph, BFS helps us understand the structure and relationships within complex networks, making it a valuable tool for researchers, engineers, and developers alike."
-      ],
-      "algo": [
+    ],
+    "algo": [
       "STEP 1 - Start: Choose a starting node from which to begin the traversal.",
       "STEP 2 - Initialization: Create a queue data structure to keep track of the nodes to visit. Create a set or array to keep track of visited nodes. Enqueue the starting node into the queue. Mark the starting node as visited.",
       "STEP 3 - Traversal: While the queue is not empty: Dequeue a node from the front of the queue (let's call it the 'current node'). Process the current node (e.g., print it or perform any desired operation). Enqueue all unvisited neighboring nodes of the current node into the queue. Mark each neighboring node as visited. ",
       "STEP 4 - Termination: Repeat step 3 until the queue becomes empty.",
       "STEP 5 -Completion: When the queue becomes empty, the BFS traversal is complete. You've visited all reachable nodes from the starting node."
-      ],
-      "animation": "graphbfs.mp4",
-      "code":[
+    ],
+    "animation": "graphbfs.mp4",
+    "code": [
       "void BFS(vector<vector<int>>& graph, int start) {",
-      "...int vertices = graph.size();",
-      "...vector<bool> visited(vertices, false); // Mark all vertices as not visited",
-      "...queue<int> q; // Create a queue for BFS",
-      "...visited[start] = true; // Mark the current node as visited and enqueue it",
-      "...q.push(start);",
-      "...while (!q.empty()) {",
-      "......int current = q.front(); // Dequeue a vertex from queue and print it",
-      "...cout << current << ' ';",
-      "...q.pop();",
-      "...for (int i = 0; i < graph[current].size(); ++i) {",
-      "......int adjacent = graph[current][i];",
-      "......if (!visited[adjacent]) {",
-      ".........visited[adjacent] = true;",
-      ".........q.push(adjacent);",
-      "......}",
-      "...}",
+      "    int vertices = graph.size();",
+      "    vector<bool> visited(vertices, false); // Mark all vertices as not visited",
+      "    queue<int> q; // Create a queue for BFS",
+      "    visited[start] = true; // Mark the current node as visited and enqueue it",
+      "    q.push(start);",
+      "    while (!q.empty()) {",
+      "        int current = q.front(); // Dequeue a vertex from queue and print it",
+      "        cout << current << ' ';",
+      "        q.pop();",
+      "        for (int i = 0; i < graph[current].size(); ++i) {",
+      "            int adjacent = graph[current][i];",
+      "            if (!visited[adjacent]) {",
+      "                visited[adjacent] = true;",
+      "                q.push(adjacent);",
+      "            }",
+      "        }",
+      "    }",
       "}"
-      ]
-    },
+    ]
+  },
 
-
-    "graphdfs": {
-      "type": "DFS in Graph",
-      "desc": [
+  "graphdfs": {
+    "type": "DFS in Graph",
+    "desc": [
       "Depth-First Search (DFS) is a fundamental algorithm used for traversing or searching tree or graph data structures. It starts at a selected node (often called the 'root' node) and explores as far as possible along each branch before backtracking.",
       "DFS is commonly implemented using recursion or a stack data structure. Recursive DFS is straightforward to implement and understand, but it may encounter issues with large graphs due to stack overflow. In contrast, using a stack allows for a non-recursive implementation that avoids these limitations"
-      ],
-      "algo": [
+    ],
+    "algo": [
       "STEP 1 - Input: The input to the algorithm is a graph represented either as an adjacency list or an adjacency matrix, and a starting node from which the DFS traversal begins.",
       "STEP 2 - Initialization: Create a boolean array to mark visited nodes. Initially, mark all nodes as unvisited. Create an empty stack to keep track of nodes to visit. Push the starting node onto the stack.",
       "STEP 3 - DFS Traversal: While the stack is not empty: Pop a node from the stack. If the popped node has not been visited: Mark it as visited. Process the node (e.g., print it, store it in a list, etc.). Get all adjacent nodes of the popped node that have not been visited, and push them onto the stack.",
       "STEP 4 - Repeat Step 3 until the stack becomes empty."
-      ],
-      "animation": "graphdfs.mp4",
-      "code": [
+    ],
+    "animation": "graphdfs.mp4",
+    "code": [
       "void DFS(const vector<vector<int>>& graph, int startNode) {",
-      "...int numNodes = graph.size();",
-      "...vector<bool> visited(numNodes, false); // Array to mark visited nodes",
-      "...stack<int> s; // Stack to keep track of nodes to visi",
-      "...s.push(startNode); // Push the starting node onto the stack",
-      "...// DFS traversal",
-      "...while (!s.empty()) {",
-      "......int currentNode = s.top();",
-      "......s.pop();",
-      "......// Process the current node if it hasn't been visited",
-      "......if (!visited[currentNode]) {",
-      ".........cout << currentNode << ' '; // Process node (e.g., print it)",
-      ".........visited[currentNode] = true; // Mark node as visited",
-      ".........// Push unvisited neighbors onto the stack",
-      ".........for (int neighbor : graph[currentNode]) {",
-      "............if (!visited[neighbor]) {",
-      "............s.push(neighbor);",
-      "............}",
-      ".........}",
-      "......}",
-      "...}",
+      "    int numNodes = graph.size();",
+      "    vector<bool> visited(numNodes, false); // Array to mark visited nodes",
+      "    stack<int> s; // Stack to keep track of nodes to visit",
+      "    s.push(startNode); // Push the starting node onto the stack",
+      "    // DFS traversal",
+      "    while (!s.empty()) {",
+      "        int currentNode = s.top();",
+      "        s.pop();",
+      "        // Process the current node if it hasn't been visited",
+      "        if (!visited[currentNode]) {",
+      "            cout << currentNode << ' '; // Process node (e.g., print it)",
+      "            visited[currentNode] = true; // Mark node as visited",
+      "            // Push unvisited neighbors onto the stack",
+      "            for (int neighbor : graph[currentNode]) {",
+      "                if (!visited[neighbor]) {",
+      "                    s.push(neighbor);",
+      "                }",
+      "            }",
+      "        }",
+      "    }",
       "}"
-      ]
-    },
+    ]
+  },
 
-    "graphtopological": {
-      "type": "Topological sort in Graph",
-      "desc": [
+  "graphtopological": {
+    "type": "Topological sort in Graph",
+    "desc": [
       "Topological sorting is a way to order the nodes of a directed graph such that for every directed edge u→v, node u comes before node v in the ordering. It's used primarily on Directed Acyclic Graphs (DAGs), meaning graphs with no directed cycles.",
       "The resulting order is a linear sequence of vertices where each vertex comes after its dependencies. This ordering is called a topological order.",
       "Topological sorting is useful in various applications like task scheduling, dependency resolution, and job sequencing. It's commonly implemented using Depth-First Search (DFS) or Breadth-First Search (BFS) algorithms."
-      ],
-      "algo": [
+    ],
+    "algo": [
       "STEP 1 - Input: The input to the algorithm is a directed graph represented as an adjacency list or adjacency matrix.",
       "STEP 2 - Initialization: Initialize an array or list to store the topological order of nodes. Initialize a stack to store nodes with no incoming edges (source nodes)",
       "STEP 3 - Identify Source Nodes: Iterate through all nodes in the graph. For each node, check if it has no incoming edges (i.e., in-degree is 0). If a node has no incoming edges, push it onto the stack.",
@@ -688,230 +706,220 @@
       "STEP 5 - Repeat Step 4 until the stack becomes empty.",
       "STEP 6 - Check for Cycles: After processing all nodes, if the topological order list contains fewer nodes than the total number of nodes in the graph, there must be a cycle in the graph, and topological sorting is not possible.",
       "STEP 7 - Output: If no cycles are detected, the topological order list represents the desired ordering of nodes."
-      ],
-      "animation": "graphtopological.mp4",
-      "code": [
+    ],
+    "animation": "graphtopological.mp4",
+    "code": [
       "void topologicalSort() {",
-      "...stack<int> stack;",
-      "...vector<bool> visited(V, false);",
-      "...for (int i = 0; i < V; ++i) {",
-      "......if (!visited[i])",
-      ".........topologicalSortUtil(i, visited, stack);",
-      "...}",
-      "...cout << 'Topological Sorting: ';",
-      "...while (!stack.empty()) {",
-      "......cout << stack.top() << ' ';",
-      "......stack.pop();",
-      "...}",
-      "...cout << endl",
+      "    stack<int> stack;",
+      "    vector<bool> visited(V, false);",
+      "    for (int i = 0; i < V; ++i) {",
+      "        if (!visited[i])",
+      "            topologicalSortUtil(i, visited, stack);",
+      "    }",
+      "    cout << 'Topological Sorting: ';",
+      "    while (!stack.empty()) {",
+      "        cout << stack.top() << ' ';",
+      "        stack.pop();",
+      "    }",
+      "    cout << endl",
       "}"
+    ]
+  },
 
-      ]
-    },
+  "algoprims": {
+    "type": "Prims Algorithm",
+    "desc": [
+      "Prim's Algorithm is a greedy algorithm that is used to find the minimum spanning tree from a graph. Prim's algorithm finds the subset of edges that includes every vertex of the graph such that the sum of the weights of the edges can be minimized.",
+      "Prim's algorithm starts with the single node and explores all the adjacent nodes with all the connecting edges at every step. The edges with the minimal weights causing no cycles in the graph got selected."
+    ],
+    "algo": [
+      "Step 1: Determine an arbitrary vertex as the starting vertex of the MST.",
+      "Step 2: Follow steps 3 to 5 till there are vertices that are not included in the MST (known as fringe vertex).",
+      "Step 3: Find edges connecting any tree vertex with the fringe vertices.",
+      "Step 4: Find the minimum among these edges.",
+      "Step 5: Add the chosen edge to the MST if it does not form any cycle.",
+      "Step 6: Return the MST and exit"
+    ],
+    "animation": "prims.mp4",
+    "code": [
+      "//Initialize an empty set to hold the vertices in the minimum spanning tree",
+      "mst = empty set",
+      "//Select the first vertex to start the tree",
+      "startVertex = first vertex in graph",
+      "mst.add(startVertex)",
+      "//Initialize the set of edges to consider",
+      "edges = edges connected to startVertex",
+      "//Iterate until all vertices are in the minimum spanning tree",
+      "while mst has fewer vertices than graph:",
+      "    //Find the minimum edge in the set of edges",
+      "    minEdge, minWeight = findMinEdge(edges)",
+      "    //Add the vertex to the minimum spanning tree",
+      "    mst.add(minEdge)",
+      "    //Add the edges connected to the vertex to the set of edges to consider",
+      "    for edge in edges connected to minEdge:",
+      "        if edge is not in mst:",
+      "            edges.add(edge)",
+      "    //Remove the minimum edge from the set of edges to consider",
+      "    edges.remove(minEdge)",
+      "//Return the minimum spanning tree as an array",
+      "return mst as an array"
+    ]
+  },
 
-    "algoprims": {
-      "type": "Prims Algorithm",
-      "desc": [
-        "Prim's Algorithm is a greedy algorithm that is used to find the minimum spanning tree from a graph. Prim's algorithm finds the subset of edges that includes every vertex of the graph such that the sum of the weights of the edges can be minimized.",
-        "Prim's algorithm starts with the single node and explores all the adjacent nodes with all the connecting edges at every step. The edges with the minimal weights causing no cycles in the graph got selected."
-      ],
-      "algo": [
-        "Step 1: Determine an arbitrary vertex as the starting vertex of the MST.",
-        "Step 2: Follow steps 3 to 5 till there are vertices that are not included in the MST (known as fringe vertex).",
-        "Step 3: Find edges connecting any tree vertex with the fringe vertices.",
-        "Step 4: Find the minimum among these edges.",
-        "Step 5: Add the chosen edge to the MST if it does not form any cycle.",
-        "Step 6: Return the MST and exit"
-      ],
-      "animation": "prims.mp4",
-      "code": [
-        "//Initialize an empty set to hold the vertices in the minimum spanning tree",
-        "mst = empty set",
-        "//Select the first vertex to start the tree",
-        "startVertex = first vertex in graph",
-        "mst.add(startVertex)",
-        "//Initialize the set of edges to consider",
-        "edges = edges connected to startVertex",
-        "//Iterate until all vertices are in the minimum spanning tree",
-        "while mst has fewer vertices than graph:",
-        "...//Find the minimum edge in the set of edges",
-        "...minEdge, minWeight = findMinEdge(edges)",
-        "...//Add the vertex to the minimum spanning tree",
-        "...mst.add(minEdge)",
-        "...Add the edges connected to the vertex to the set of edges to consider",
-        "...for edge in edges connected to minEdge:",
-        "......if edge is not in mst:",
-        ".........edges.add(edge)",
-        "...//Remove the minimum edge from the set of edges to consider",
-        "...edges.remove(minEdge)",
-        "//Return the minimum spanning tree as an array",
-        "return mst as an array"
-      ]
-    },
+  "algokruskal": {
+    "type": "Kruskal's Algorithm",
+    "desc": [
+      "A minimum spanning tree (MST) or minimum weight spanning tree for a weighted, connected, undirected graph is a spanning tree with a weight less than or equal to the weight of every other spanning tree.",
+      "In Kruskal’s algorithm, sort all edges of the given graph in increasing order. Then it keeps on adding new edges and nodes in the MST if the newly added edge does not form a cycle. It picks the minimum weighted edge at first and the maximum weighted edge at last. Thus we can say that it makes a locally optimal choice in each step in order to find the optimal solution. Hence this is a Greedy Algorithm."
+    ],
+    "algo": [
+      "Step 1: Sort all the edges in non-decreasing order of their weight.",
+      "Step 2: Pick the smallest edge. Check if it forms a cycle with the spanning tree formed so far. If the cycle is not formed, include this edge. Else, discard it. ",
+      "Step 3: Repeat step#2 until there are (V-1) edges in the spanning tree."
+    ],
+    "animation": "algokruskal.mp4",
+    "code": [
+      "FUNCTION KruskalMST(Graph G)",
+      "    Let F = an empty list to store the edges of the minimum spanning tree",
+      "    Let V = number of vertices in the graph G",
+      "    Sort all the edges of G in increasing order based on their weights",
+      "    Create a union-find data structure for the vertices of G",
+      "    FOR each edge (u, v) in the sorted list of edges",
+      "        IF Find(u) ≠ Find(v)",
+      "            Add edge (u, v) to F",
+      "            Union(u, v)",
+      "        IF length of F == V - 1",
+      "            BREAK",
+      "    RETURN F"
+    ]
+  },
 
-    "algokruskal": {
-      "type": "Kruskal's Algorithm",
-      "desc": 
-      [
-        "A minimum spanning tree (MST) or minimum weight spanning tree for a weighted, connected, undirected graph is a spanning tree with a weight less than or equal to the weight of every other spanning tree.",
-        "In Kruskal’s algorithm, sort all edges of the given graph in increasing order. Then it keeps on adding new edges and nodes in the MST if the newly added edge does not form a cycle. It picks the minimum weighted edge at first and the maximum weighted edge at last. Thus we can say that it makes a locally optimal choice in each step in order to find the optimal solution. Hence this is a Greedy Algorithm."
-      ],
-      "algo": [
-        "Step 1: Sort all the edges in non-decreasing order of their weight.",
-        "Step 2: Pick the smallest edge. Check if it forms a cycle with the spanning tree formed so far. If the cycle is not formed, include this edge. Else, discard it. ",
-        "Step 3: Repeat step#2 until there are (V-1) edges in the spanning tree."
-      ],
-      "animation": "algokruskal.mp4",
-      "code": [
-        "FUNCTION KruskalMST(Graph G)",
-        "...Let F = an empty list to store the edges of the minimum spanning tree",
-        "...Let V = number of vertices in the graph G",
-        "...Sort all the edges of G in increasing order based on their weights",
-        "...Create a union-find data structure for the vertices of G",
-        "...FOR each edge (u, v) in the sorted list of edges",
-        "......IF Find(u) ≠ Find(v)",
-        ".........Add edge (u, v) to F",
-        ".........Union(u, v)",
-        "......IF length of F == V - 1",
-        ".........BREAK",
-        " RETURN F"
-      ]
-    },
+  "algodjikstra": {
+    "type": "Dijkstra's Algorithm",
+    "desc": [
+      "Dijkstra's algorithm is a step-by-step method used to find the shortest path from one point (or 'node') to all other points in a graph. A graph is a collection of points (we call these points 'nodes' or 'vertices') connected by lines (we call these lines 'edges'). In many graphs, each edge has a number representing how 'far' or 'costly' it is to travel from one node to the other. This number is often called the 'weight' of the edge.",
+      "Imagine you're looking at a map of cities with roads connecting them, and you want to find the shortest way to get from City A to all other cities. Dijkstra's algorithm helps you do that efficiently. It systematically checks all possible routes starting from City A and keeps track of the shortest distance to each city. Once it has processed all cities, it can tell you the shortest path from City A to any other city on the map."
+    ],
+    "algo": [
+      "Step 1: Start Preparation- Mark all nodes unvisited. Create a set of all the unvisited nodes called the unvisited set. Assign to every node a tentative distance value: set it to zero for our initial node and to infinity for all other nodes.",
+      "Step 2: Select Initial Node- Set the initial node as the current node.",
+      "Step 3: Visit Neighbors- For the current node, consider all of its unvisited neighbors and calculate their tentative distances through the current node. Compare the newly calculated tentative distance to the current assigned value and assign the smaller one. For example, if the current node A is marked with a distance of 6, and the edge connecting it with a neighbor B has length 2, then the distance to B through A will be 6 + 2 = 8. If B was previously marked with a distance greater than 8 then change it to 8. If not, leave it as it is.",
+      "Step 4: Mark as Visited- When we've considered all of the unvisited neighbors of the current node, mark the current node as visited. A visited node will not be checked again.",
+      "Step 5: Select Next Node- Select the unvisited node that is marked with the smallest tentative distance, set it as the new 'current node' and go back to step 3.",
+      "Step 6: Repeat- Continue this process until all the nodes are visited."
+    ],
+    "animation": "algodjikstra.mp4",
+    "code": [
+      "function Dijkstra(Graph, source):",
+      "    // Initialize distance for all nodes to infinity, except the source node set to 0",
+      "    distance = dict()",
+      "    for each vertex V in Graph:",
+      "        distance[V] = infinity",
+      "    distance[source] = 0",
+      "    // Initialize set Q to contain all nodes",
+      "    Q = set(all nodes in Graph)",
+      "    // Initialize the predecessor map, to reconstruct the path later",
+      "    predecessor = dict()",
+      "    while Q is not empty:",
+      "        // Find the node in Q with the smallest distance",
+      "        u = node in Q with minimum distance[u]",
+      "        // Remove u from Q",
+      "        Q.remove(u)",
+      "        // For each neighbor v of u: update distance[v]",
+      "        for each neighbor v of u:",
+      "            alt = distance[u] + length(u, v)",
+      "            if alt < distance[v]:",
+      "                distance[v] = alt",
+      "                predecessor[v] = u",
+      "    return distance, predecessor"
+    ]
+  },
 
-    "algodjikstra": {
-      "type": "Dijkstra's Algorithm",
-      "desc": [
-        "Dijkstra's algorithm is a step-by-step method used to find the shortest path from one point (or 'node') to all other points in a graph. A graph is a collection of points (we call these points 'nodes' or 'vertices') connected by lines (we call these lines 'edges'). In many graphs, each edge has a number representing how 'far' or 'costly' it is to travel from one node to the other. This number is often called the 'weight' of the edge.",
-        "Imagine you're looking at a map of cities with roads connecting them, and you want to find the shortest way to get from City A to all other cities. Dijkstra's algorithm helps you do that efficiently. It systematically checks all possible routes starting from City A and keeps track of the shortest distance to each city. Once it has processed all cities, it can tell you the shortest path from City A to any other city on the map."
-      ],
-      "algo": [
-        "Step 1: Start Preparation- Mark all nodes unvisited. Create a set of all the unvisited nodes called the unvisited set. Assign to every node a tentative distance value: set it to zero for our initial node and to infinity for all other nodes.",
-        "Step 2: Select Initial Node- Set the initial node as the current node.",
-        "Step 3: Visit Neighbors- For the current node, consider all of its unvisited neighbors and calculate their tentative distances through the current node. Compare the newly calculated tentative distance to the current assigned value and assign the smaller one. For example, if the current node A is marked with a distance of 6, and the edge connecting it with a neighbor B has length 2, then the distance to B through A will be 6 + 2 = 8. If B was previously marked with a distance greater than 8 then change it to 8. If not, leave it as it is.",
-        "Step 4: Mark as Visited- When we've considered all of the unvisited neighbors of the current node, mark the current node as visited. A visited node will not be checked again.",
-        "Step 5: Select Next Node- Select the unvisited node that is marked with the smallest tentative distance, set it as the new 'current node' and go back to step 3.",
-        "Step 6: Repeat- Continue this process until all the nodes are visited."
-      ],
-      "animation": "algodijkstra.mp4",
-      "code": [
-        "function Dijkstra(Graph, source):",
-        "...// Initialize distance for all nodes to infinity, except the source node set to 0",
-        "...distance = dict()",
-        "...for each vertex V in Graph:",
-        "......distance[V] = infinity",
-        "...distance[source] = 0",
-   
-        "...// Initialize set Q to contain all nodes",
-        "...Q = set(all nodes in Graph)",
-   
-        "...// Initialize the predecessor map, to reconstruct the path later",
-        "...predecessor = dict()",
-   
-        "...while Q is not empty:",
-        "......// Find the node in Q with the smallest distance",
-        "......u = node in Q with minimum distance[u]",
-           
-        "......// Remove u from Q",
-        "......Q.remove(u)",
-   
-         "......// For each neighbor v of u: update distance[v]",
-         "......for each neighbor v of u:",
-         ".........alt = distance[u] + length(u, v)",
-         ".........if alt < distance[v]:",
-         "............distance[v] = alt",
-         "...............predecessor[v] = u",
-   
-         "...return distance, predecessor"  
-      ]
-    },
+  "algobellman": {
+    "type": "Bellman Algorithm",
+    "desc": [
+      "Bellman-Ford is a single source shortest path algorithm that determines the shortest path between a given source vertex and every other vertex in a graph. This algorithm can be used on both weighted and unweighted graphs.",
+      "A Bellman-Ford algorithm is also guaranteed to find the shortest path in a graph, similar to Dijkstra’s algorithm. Although Bellman-Ford is slower than Dijkstra’s algorithm, it is capable of handling graphs with negative edge weights, which makes it more versatile."
+    ],
+    "algo": [
+      "Step 1: Initialize distance array dist[] to infinity for all vertices and dist[source] to 0.",
+      "Step 2: Repeat the following steps for |V| - 1 times, where |V| is the number of vertices in the graph:",
+      "Step 3: For each edge (u, v) in G: if dist[u] + weight(u, v) < dist[v], update dist[v] to dist[u] + weight(u, v).",
+      "Step 4: After |V| - 1 iterations, check for negative cycles:",
+      "Step 5: For each edge (u, v) in G: if dist[u] + weight(u, v) < dist[v], then a negative cycle exists.",
+      "Step 6: Return the distance array dist[]."
+    ],
+    "animation": "bellmanford.mp4",
+    "code": [
+      "function bellmanFord(G, S)",
+      "    for each vertex V in G",
+      "        distance[V] <- infinite",
+      "        previous[V] <- NULL",
+      "    distance[S] <- 0",
+      "    for each vertex V in G",
+      "        for each edge (U,V) in G",
+      "            tempDistance <- distance[U] + edge_weight(U, V)",
+      "            if tempDistance < distance[V]",
+      "                distance[V] <- tempDistance",
+      "                previous[V] <- U",
+      "    for each edge (U,V) in G",
+      "        If distance[U] + edge_weight(U, V) < distance[V]",
+      "            Error: Negative Cycle Exists",
+      "    return distance[], previous[]"
+    ]
+  },
 
-    "algobellman": {
-      "type": "Bellman Algorithm",
-      "desc": [
-        "Bellman-Ford is a single source shortest path algorithm that determines the shortest path between a given source vertex and every other vertex in a graph. This algorithm can be used on both weighted and unweighted graphs.",
-        "A Bellman-Ford algorithm is also guaranteed to find the shortest path in a graph, similar to Dijkstra’s algorithm. Although Bellman-Ford is slower than Dijkstra’s algorithm, it is capable of handling graphs with negative edge weights, which makes it more versatile."
-      ],
-      "algo": [
-        "Step 1: Initialize distance array dist[] to infinity for all vertices and dist[source] to 0.",
-        "Step 2: Repeat the following steps for |V| - 1 times, where |V| is the number of vertices in the graph:",
-        "Step 3: For each edge (u, v) in G: if dist[u] + weight(u, v) < dist[v], update dist[v] to dist[u] + weight(u, v).",
-        "Step 4: After |V| - 1 iterations, check for negative cycles:",
-        "Step 5: For each edge (u, v) in G: if dist[u] + weight(u, v) < dist[v], then a negative cycle exists.",
-        "Step 6: Return the distance array dist[]."
-      ],
-      "animation": "bellmanford.mp4",
-      "code": [
-        "function bellmanFord(G, S)",
-        "...for each vertex V in G",
-        "......distance[V] <- infinite",
-        ".........previous[V] <- NULL",
-        "...distance[S] <- 0",
-        "...for each vertex V in G",
-        "......for each edge (U,V) in G",
-        ".........tempDistance <- distance[U] + edge_weight(U, V)",
-        ".........if tempDistance < distance[V]",
-        "............distance[V] <- tempDistance",
-        "............previous[V] <- U",
-        "...for each edge (U,V) in G",
-        "......If distance[U] + edge_weight(U, V) < distance[V}",
-        ".........Error: Negative Cycle Exists",
-        "...return distance[], previous[]"
-      ]
-    },
-
-    "algokosaraju": {
-      "type": "Kosaraju's Algorithm",
-      "desc": [
+  "algokosaraju": {
+    "type": "Kosaraju's Algorithm",
+    "desc": [
       "Given a directed graph, find out whether the graph is strongly connected or not. A directed graph is strongly connected if there is a path between any two pair of vertices.",
       "We can find all SCCs in O(V+E) time. If number of SCCs is one, then graph is strongly connected. The algorithm for SCC does extra work as it finds all SCCs. "
-      ],
-      "algo": [
+    ],
+    "algo": [
       "Step 1: Initialize all vertices as not visited.",
       "Step 2: Do a DFS traversal of graph starting from any arbitrary vertex v. If DFS traversal doesn’t visit all vertices, then return false.",
       "Step 3: Reverse all arcs (or find transpose or reverse of graph) ",
       "Step 4: Mark all vertices as not-visited in reversed graph.",
       "Step 5: Do a DFS traversal of reversed graph starting from same vertex v (Same as step 2). If DFS traversal doesn’t visit all vertices, then return false. Otherwise return true."
-      ],
-      "animation": "algokosaraju.mp4",
-      "code": [
+    ],
+    "animation": "algokosaraju.mp4",
+    "code": [
       "KosarajuAlgorithm(Graph G)",
-      "...//Step 1: Perform DFS on the original graph",
-      "..Call DFS(G)",
-      "...// Step 2: Reverse the graph",
-      "...Graph G_reversed = ReverseGraph(G)",
-      "...// Step 3: Perform DFS on the reversed graph",
-      "...Call DFS(G_reversed)",
+      "    //Step 1: Perform DFS on the original graph",
+      "    Call DFS(G)",
+      "    // Step 2: Reverse the graph",
+      "    Graph G_reversed = ReverseGraph(G)",
+      "    // Step 3: Perform DFS on the reversed graph",
+      "    Call DFS(G_reversed)",
       "DFS(Graph G)",
-      "...// Initialize an empty set to keep track of visited vertices",
-      "...Set visited = {}",
-      "...// Initialize an empty stack to store the vertices in the order they finish DFS",
-      "...Stack stack = {}",
-      "...// Iterate through all vertices in G",
-      "...for each vertex v in G:",
-      "......if v is not visited:",
-      "......// Call the recursive DFS function",
-      "......RecursiveDFS(G, v, visited, stack)",
+      "    // Initialize an empty set to keep track of visited vertices",
+      "    Set visited = {}",
+      "    // Initialize an empty stack to store the vertices in the order they finish DFS",
+      "    Stack stack = {}",
+      "    // Iterate through all vertices in G",
+      "    for each vertex v in G:",
+      "        if v is not visited:",
+      "            // Call the recursive DFS function",
+      "            RecursiveDFS(G, v, visited, stack)",
       "RecursiveDFS(Graph G, Vertex v, Set visited, Stack stack)",
-      "...// Mark v as visited",
-      "...Add v to visited set",
-      "...// Iterate through all adjacent vertices of v",
-      "...for each neighbor w of v in G:",
-      "......if w is not visited:",
-      ".........// Recursively call DFS for the neighbor",
-      ".........RecursiveDFS(G, w, visited, stack)",
-      "...// Push v onto the stack after all its neighbors have been visited",
-      "...Push v onto stack",
+      "    // Mark v as visited",
+      "    Add v to visited set",
+      "    // Iterate through all adjacent vertices of v",
+      "    for each neighbor w of v in G:",
+      "        if w is not visited:",
+      "            // Recursively call DFS for the neighbor",
+      "            RecursiveDFS(G, w, visited, stack)",
+      "    // Push v onto the stack after all its neighbors have been visited",
+      "    Push v onto stack",
       "ReverseGraph(Graph G)",
-      "...// Create an empty graph G_reversed",
-      "...Graph G_reversed = {}",
-      "...// Iterate through all edges (u, v) in G",
-      "...for each edge (u, v) in G:",
-      "......// Add the reverse edge (v, u) to G_reversed",
-      "......Add edge (v, u) to G_reversed",
-      "...// Return the reversed graph G_reversed",
-      "...return G_reversed"
-      ]
-    }
-
+      "    // Create an empty graph G_reversed",
+      "    Graph G_reversed = {}",
+      "    // Iterate through all edges (u, v) in G",
+      "    for each edge (u, v) in G:",
+      "        // Add the reverse edge (v, u) to G_reversed",
+      "        Add edge (v, u) to G_reversed",
+      "    // Return the reversed graph G_reversed",
+      "    return G_reversed"
+    ]
   }
-  
+}

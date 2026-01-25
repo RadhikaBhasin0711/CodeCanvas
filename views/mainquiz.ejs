@@ -3,106 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn</title>
-    <link rel="stylesheet" href="mainquiz.css">
+    <!-- Dynamic & meaningful title -->
+    <title>Practice - CodeCanvas</title>
+    <link rel="stylesheet" href="/mainquiz.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link href='https://fonts.googleapis.com/css?family=Source Sans 3' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <div id="wrapper">
         <div class="container">
-            <nav class="navbar" >
-                <a class="navbar-brand" href="#">
-                    <img src="/media/logocc.jpg" width="30" height="30" class="logo" alt="">
-                   
-                </a>
-                <p class="nav-title">CodeCanvas</p>
-               
-                <form class="form-inline">
-                  <input class="search" type="search" placeholder="Search" aria-label="Search">
-                    <i class="fa fa-search" style="font-size:25px"></i>              
-                </form>
-              </nav>
+            <!-- Navbar (same as other pages) -->
+            <nav class="navbar">
+                <div class="nav-left">
+                    <img src="/media/logocc.jpg" class="logo" alt="CodeCanvas Logo">
+                    <span class="nav-title">CodeCanvas</span>
+                </div>
+                <div class="nav-right">
+                    <div class="search-wrapper">
+                        <input class="search" type="search" placeholder="Search topics..." autocomplete="off">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Main Heading -->
             <div class="head">
                 <h1 class="topic">Topics</h1>
+                <p class="subtitle">Build strong DSA foundations • Step-by-step concepts & examples</p>
             </div>
+
+            <!-- Topics List -->
             <section class="main">
                 <ul class="topicslist">
-                    <li class="arr">
-                        <button class="arr-btn"><a href="practice/array" class="arrh"><p class="arrh">Array</p></a></button>
-                        
+                    <li class="category">
+                        <button class="category-btn">
+                            <a href="/practice/array" class="category-link">
+                                <span class="category-title">Array</span>
+                            </a>
+                        </button>
                     </li>
-                    <br>
-                    <li class="ll">
-                        <button class="ll-btn"><a href="practice/linkedlist" class="llh"><p class="llh">Linked List</p></a></button>
-                        
+
+                    <li class="category">
+                        <button class="category-btn">
+                            <a href="/practice/linkedlist" class="category-link">
+                                <span class="category-title">Linked List</span>
+                            </a>
+                        </button>
                     </li>
-                    <br>
-                    <li class="sor">
-                        <button class="sor-btn"><p class="sorh">Sorting</p></button>
-                        <div class="sor-content">
-                            <a href="learn/bubblesort">Bubble Sort</a>
-                            <a href="learn/selectionsort">Selection Sort</a>
-                            <a href="learn/insertionsort">Insertion Sort</a>
-                            <a href="learn/mergesort">Merge Sort</a>
-                            <a href="learn/quicksort">Quick Sort</a>
+
+                    <li class="category">
+                        <button class="category-btn">
+                            <span class="category-title">Sorting</span>
+                        </button>
+                        <div class="category-content">
+                            <a href="/practice/bubblesort">Bubble Sort</a>
+                            <a href="/practice/selectionsort">Selection Sort</a>
+                            <a href="/practice/insertionsort">Insertion Sort</a>
+                            <a href="/practice/mergesort">Merge Sort</a>
+                            <a href="/practice/quicksort">Quick Sort</a>
                         </div>
                     </li>
-                    <br>
-                    <li class="sear">
-                        <button class="sear-btn"><p class="searh">Searching</p></button>
-                        <div class="sear-content">
-                            <a href="learn/searchlinear">Linear Search</a>
-                            <a href="learn/searchbinary">Binary Search</a>
+
+                    <li class="category">
+                        <button class="category-btn">
+                            <span class="category-title">Searching</span>
+                        </button>
+                        <div class="category-content">
+                            <a href="/practice/searchlinear">Linear Search</a>
+                            <a href="/practice/searchbinary">Binary Search</a>
                         </div>
                     </li>
-                    <br>
-                    <li class="st">
-                        <button class="st-btn"><p class="sth">Stack</p></button>
+
+                    <li class="category">
+                        <button class="category-btn">
+                            <a href="/practice/stack" class="category-link">
+                                <span class="category-title">Stack</span>
+                            </a>
+                        </button>
                     </li>
-                    <br>
-                    <li class="qu"><button class="qu-btn"><p class="quh">Queue</p></button>
+
+                    <li class="category">
+                        <button class="category-btn">
+                            <a href="/practice/queue" class="category-link">
+                                <span class="category-title">Queue</span>
+                            </a>
+                        </button>
                     </li>
-                    <br>
-                    <li class="bt">
-                        <button class="bt-btn"><a href="practice/binarytree" class="bth"><p class="bth">Binary Tree</p></a></button>
-                        
+
+                    <li class="category">
+                        <button class="category-btn">
+                            <a href="/practice/binarytree" class="category-link">
+                                <span class="category-title">Binary Tree</span>
+                            </a>
+                        </button>
                     </li>
-                    <br>
-                    <li class="bst">
-                        <button class="bst-btn"><p class="bsth">Binary Search Tree</p></button>
-                        <div class="bst-content">
-                            <a href="learn/binarysearchtreeinsertion">Insertion</a>
-                            <a href="learn/binarysearchtreedeletion">Deletion</a>
+
+                    <li class="category">
+                        <button class="category-btn">
+                            <span class="category-title">Binary Search Tree</span>
+                        </button>
+                        <div class="category-content">
+                            <a href="/practice/binarysearchtreeinsertion">Insertion</a>
+                            <a href="/practice/binarysearchtreedeletion">Deletion</a>
+                            <a href="/practice/binarysearchtreesearching">Searching</a>
                         </div>
                     </li>
-                    <br>
-                    <li class="gr">
-                        <button class="gr-btn"><p class="grh">Graphs</p></button>
-                        <div class="gr-content">
-                            <a href="learn/graphbfs">BFS</a>
-                            <a href="learn/graphdfs">DFS</a>
-                            <a href="learn/graphtopological">Topological Sort</a>
+
+                    <li class="category">
+                        <button class="category-btn">
+                            <span class="category-title">Graphs</span>
+                        </button>
+                        <div class="category-content">
+                            <a href="/practice/graphbfs">BFS</a>
+                            <a href="/practice/graphdfs">DFS</a>
+                            <a href="/practice/graphtopological">Topological Sort</a>
                         </div>
                     </li>
-                    
-                    <br>
-                    <li class="alg">
-                        <button class="alg-btn"><p class="algh">Algorithms</p></button>
-                        <div class="alg-content">
-                            <a href="learn/algoprims">Prim's Algorithm</a>
-                            <a href="learn/algokruskal">Kruskal Algorithm</a>
-                            <a href="learn/algodjikstra">Dijkstra Algorithm</a>
-                            <a href="learn/algobellman">Bellman Ford Algorithm</a>
-                            <a href="learn/algokosaraju">Kosaraju Algorithm</a>
+
+                    <li class="category">
+                        <button class="category-btn">
+                            <span class="category-title">Algorithms</span>
+                        </button>
+                        <div class="category-content">
+                            <a href="/practice/algoprims">Prim's Algorithm</a>
+                            <a href="/practice/algokruskal">Kruskal's Algorithm</a>
+                            <a href="/practice/algodjikstra">Dijkstra's Algorithm</a>
+                            <a href="/practice/algobellman">Bellman-Ford Algorithm</a>
+                            <a href="/practice/algokosaraju">Kosaraju's Algorithm</a>
                         </div>
                     </li>
-                    
                 </ul>
-                
             </section>
-            
         </div>
     </div>
 </body>

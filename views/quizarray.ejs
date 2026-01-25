@@ -3,39 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Array Practice - CodeCanvas</title>
     <link rel="stylesheet" href="/quiz.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link href='https://fonts.googleapis.com/css?family=Source Sans 3' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar" >
-        <a class="navbar-brand" href="#">
-            <img src="/media/logocc.jpg" width="30" height="30" class="logo" alt="">
-           
-        </a>
-        <p class="nav-title">CodeCanvas</p>
-       
-        <form class="form-inline">
-          <input class="search" type="search" placeholder="Search" aria-label="Search">
-            <i class="fa fa-search" style="font-size:25px"></i>              
-        </form>
-      </nav>
-    <div class="app">
-        <h1>Array</h1>
-        <div class="quiz">
-            <h2 id="question">question goes here </h2>
-            <div id="answer-buttons">
-                <div class="btn">Ans 1</div>
-                <div class="btn">Ans 2</div>
-                <div class="btn">Ans 3</div>
-                <div class="btn">Ans 4</div>
+    <!-- Navbar – same as topics/learn page -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="/media/logocc.jpg" class="logo" alt="CodeCanvas Logo">
+            <span class="nav-title">CodeCanvas</span>
+        </div>
+        <div class="nav-right">
+            <div class="search-wrapper">
+                <input class="search" type="search" placeholder="Search topics..." autocomplete="off">
+                <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-            <button id="next-btn">Next</button>
+        </div>
+    </nav>
+
+    <div id="wrapper">
+        <div class="container">
+            <!-- Heading – matches Topics page style -->
+            <div class="head">
+                <h1 class="topic">Array Practice</h1>
+            </div>
+
+            <!-- Quiz Card -->
+            <div class="app">
+                <div class="quiz">
+                    <h2 id="question">Question goes here</h2>
+                    <div id="answer-buttons">
+                        <button class="btn">Option 1</button>
+                        <button class="btn">Option 2</button>
+                        <button class="btn">Option 3</button>
+                        <button class="btn">Option 4</button>
+                    </div>
+                    <button id="next-btn">Next</button>
+                </div>
+            </div>
         </div>
     </div>
-    
-<script src="/quizarray.js"></script>
+
+    <script src="/quizarray.js"></script>
 </body>
 </html>

@@ -3,80 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><%= data.type %> - CodeCanvas</title>
     <link rel="stylesheet" href="/dsapage.css">
-    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link href='https://fonts.googleapis.com/css?family=Source Sans 3' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Prism.js for code highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
 </head>
 <body>
     <div id="wrapper">
-        <div class="container">
-            <nav class="navbar" >
-                <a class="navbar-brand" href="#">
-                    <img src="/media/logocc.jpg" width="30" height="30" class="logo" alt="">
-                   
-                </a>
-                <p class="nav-title">CodeCanvas</p>
-               
-                <form class="form-inline">
-                  <input class="search" type="search" placeholder="Search" aria-label="Search">
-                    <i class="fa fa-search" style="font-size:25px"></i>              
-                </form>
-              </nav>
-             <div class="header">
-                <h1 class="title"><%= data?.type %></h1>
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <div class="nav-left">
+                <img src="/media/logocc.jpg" class="logo" alt="CodeCanvas Logo">
+                <span class="nav-title">CodeCanvas</span>
             </div>
-               
-            <div class="def">
-                <h2 class="headings def">Definition</h2>
-                <p class="definition">
-                    <% for(let desc of (data?.desc)) { %>
-                        <%=desc%>
-                        <br>
-                     <% } %>              
-                </p>
-            </div>
-       
-            <div class="algo">
-                <h2 class="headings">Algorithm</h2>
-                <p class="steps">
-                    <% for(let algo of (data?.algo)) { %>
-                        <%=algo%>
-                        <br>
-                     <% } %>  
-                </p>
-            </div> 
-           
-           
-            <div class="animation-code">
-                <div class="animation-part">
-                    <h2 class="headings">Animation</h2>
-             
-                <video width="820" height="495" class="topic-animation" controls>
-                    <source src="/media/<%=data.animation%>" type="video/mp4">
-                     Your browser does not support the video tag.
-                </video> 
-                <!-- <img src="background.png" class="bg"> -->
-               
+            <div class="nav-right">
+                <div class="search-wrapper">
+                    <input class="search" type="search" placeholder="Search topics..." autocomplete="off">
+                    <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
-               
-                 <div class="code-part">
-                    <h2 class="headings">Code</h2>
-                    <div class="code">
-                        <% for(let code of (data?.code)) { %>
-                            <%=code%>
-                            <br>
-                         <% } %>      
-                    </div>
-                   
-                </div> 
             </div>
-           
-        </div>
+        </nav>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <!-- Title & Breadcrumb -->
+            <header class="page-header">
+                <h1 class="page-title"><%= data.type.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) %></h1>
+                
+            </header>
+
+            <!-- Definition Section -->
+            <section class="section definition-section">
+                <h2 class="section-title"><i class="fas fa-book-open"></i> Definition</h2>
+                <div class="content-card">
+                    <% data.desc.forEach(desc => { %>
+                        <p><%= desc %></p>
+                    <% }); %>
+                </div>
+            </section>
+
+            <!-- Algorithm Section -->
+            <section class="section algorithm-section">
+                <h2 class="section-title"><i class="fas fa-list-ol"></i> Algorithm</h2>
+                <div class="content-card">
+                    <ol class="steps-list">
+                        <% data.algo.forEach(step => { %>
+                            <li><%= step %></li>
+                        <% }); %>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- Animation & Code Side-by-Side -->
+            <section class="section dual-section">
+                <div class="animation-container">
+                    <h2 class="section-title"><i class="fas fa-play-circle"></i> Animation</h2>
+                    <div class="video-wrapper">
+                        <video controls class="topic-video">
+                            <source src="/media/<%= data.animation %>" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+                <div class="code-container">
+                    <h2 class="section-title"><i class="fas fa-code"></i> Pseudocode</h2>
+                    <div class="code-wrapper scrollable">
+                        <pre><code class="language-javascript"><%= data.code.join('\n') %></code></pre>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
     </div>
- 
+
+    <!-- Prism.js auto-highlighting -->
+    <script>
+        Prism.highlightAll();
+    </script>
 </body>
 </html>
-
