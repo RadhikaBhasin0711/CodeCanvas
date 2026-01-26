@@ -11,7 +11,7 @@ body {
     min-height: 100vh;
 }
 
-/* Navbar – same as topics/learn */
+/* Navbar – consistent across site */
 .navbar {
     position: fixed;
     top: 0;
@@ -76,7 +76,7 @@ body {
     font-size: 18px;
 }
 
-/* Wrapper – space for navbar */
+/* Wrapper – space for fixed navbar */
 #wrapper {
     padding-top: 90px;
     background: #0a0e17;
@@ -84,7 +84,7 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -92,23 +92,112 @@ body {
 /* Heading – matches Topics page */
 .head {
     text-align: center;
-    margin: 40px 0 60px;
+    margin: 30px 0 40px;
 }
 
 .topic {
-    font-size: 48px;
+    font-size: 42px;
     font-weight: 800;
     background: linear-gradient(90deg, #c4b5fd, #f472b6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .subtitle {
-    font-size: 18px;
+    font-size: 17px;
     color: #a0a0ff;
     opacity: 0.9;
 }
+
+/* Quiz Container – compact, single-screen fit */
+.quiz-container {
+    background: rgba(25, 30, 55, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(139, 92, 246, 0.25);
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    max-height: 65vh;                    /* Fits most screens without scroll */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.quiz-container h2 {
+    font-size: 22px;
+    color: #e0e0ff;
+    font-weight: 600;
+    margin-bottom: 24px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* Options – 2×2 grid */
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+    flex: 1;
+}
+
+.option-btn {
+    background: rgba(30, 40, 60, 0.9);
+    color: #e0e0ff;
+    font-weight: 500;
+    border: 2px solid rgba(139, 92, 246, 0.3);
+    padding: 18px 24px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    text-align: center;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hover – dark purple like your screenshot */
+.option-btn:hover:not([disabled]) {
+    background: rgba(100, 70, 180, 0.6);    /* Deep purple hover */
+    border-color: #a78bfa;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.3);
+}
+
+/* Disabled (after selection) */
+.option-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+
+
+/* Next Button */
+#next-btn {
+    background: linear-gradient(90deg, #a78bfa, #d946ef);
+    color: white;
+    font-weight: 600;
+    width: 100%;
+    max-width: 220px;
+    border: none;
+    padding: 14px;
+    margin: 20px auto 0;
+    border-radius: 10px;
+    cursor: pointer;
+    display: none;
+    transition: all 0.3s;
+    font-size: 16px;
+}
+
+#next-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+}
+
+
 
 /* Quiz Card */
 .app {
@@ -162,23 +251,61 @@ body {
     background: rgba(248, 113, 113, 0.25) !important;
     border-color: #f87171 !important;
 }
+/* Score Screen */
+#score-section {
+    padding: 40px 20px;
+}
 
-#next-btn {
+.score-display {
+    margin: 30px 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: #d8b4fe;
+}
+
+.score-display span {
+    color: #a78bfa;
+}
+
+/* Buttons container on score screen */
+.score-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+#play-again-btn,
+#back-btn {
     background: linear-gradient(90deg, #a78bfa, #d946ef);
     color: white;
     font-weight: 600;
-    width: 180px;
     border: none;
-    padding: 14px;
-    margin: 30px auto 0;
-    border-radius: 8px;
+    padding: 14px 28px;
+    border-radius: 10px;
     cursor: pointer;
-    display: none;
+    font-size: 16px;
     transition: all 0.3s;
+    min-width: 180px;
 }
 
-#next-btn:hover {
+#play-again-btn:hover,
+#back-btn:hover {
     transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+}
+
+/* Back button – slightly different style (optional) */
+#back-btn {
+    background: rgba(139, 92, 246, 0.3);
+    border: 1px solid #a78bfa;
+    color: #a78bfa;
+}
+
+#back-btn:hover {
+    background: rgba(139, 92, 246, 0.5);
+    color: white;
 }
 
 /* Responsive */
