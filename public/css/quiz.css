@@ -251,7 +251,7 @@ body {
     background: rgba(248, 113, 113, 0.25) !important;
     border-color: #f87171 !important;
 }
-/* Score Screen */
+/* Score Section */
 #score-section {
     padding: 40px 20px;
 }
@@ -263,17 +263,66 @@ body {
     color: #d8b4fe;
 }
 
-.score-display span {
-    color: #a78bfa;
+#score-message {
+    margin: 0;
 }
 
-/* Buttons container on score screen */
+/* Score Buttons */
 .score-buttons {
     display: flex;
     gap: 20px;
     justify-content: center;
     margin-top: 30px;
     flex-wrap: wrap;
+}
+
+#play-again-btn,
+#back-to-topics-btn {
+    background: linear-gradient(90deg, #a78bfa, #d946ef);
+    color: white;
+    font-weight: 600;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+    min-width: 180px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#play-again-btn:hover,
+#back-to-topics-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4);
+}
+
+/* Back button – slightly different style */
+#back-to-topics-btn {
+    background: rgba(139, 92, 246, 0.3);
+    border: 1px solid #a78bfa;
+    color: #a78bfa;
+}
+
+#back-to-topics-btn:hover {
+    background: rgba(139, 92, 246, 0.5);
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .score-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    #play-again-btn,
+    #back-to-topics-btn {
+        width: 100%;
+        max-width: 300px;
+    }
 }
 
 #play-again-btn,
