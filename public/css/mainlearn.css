@@ -60,6 +60,7 @@ body::before {
     width: 38px;
     height: 38px;
     border-radius: 8px;
+    filter: saturate(0.7) brightness(0.95);
 }
 
 .nav-title {
