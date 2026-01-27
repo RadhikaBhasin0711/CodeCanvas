@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= data.type %> - CodeCanvas</title>
     <link rel="stylesheet" href="/dsapage.css">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- Prism.js for code highlighting -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css">
@@ -16,16 +16,16 @@
     <div id="wrapper">
         <!-- NAVBAR -->
         <nav class="navbar">
-            <div class="nav-left">
-                <img src="/media/logocc.jpg" class="logo" alt="CodeCanvas Logo">
+            <a href="/learn" class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+
+            <!-- Logo + Text (centered) -->
+            <div class="nav-center">
+                <img src="/media/logocc.png" class="logo" alt="CodeCanvas">
                 <span class="nav-title">CodeCanvas</span>
             </div>
-            <div class="nav-right">
-                <div class="search-wrapper">
-                    <input class="search" type="search" placeholder="Search topics..." autocomplete="off">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-            </div>
+
         </nav>
 
         <!-- MAIN CONTENT -->

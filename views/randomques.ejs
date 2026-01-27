@@ -3,124 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dropdown Selection</title>
-    <link rel="stylesheet" href="/randomques.css">
-    <link href='https://fonts.googleapis.com/css?family=Source Sans 3' rel='stylesheet'>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Generate Question - CodeCanvas</title>
+    <link rel="stylesheet" href="/quiz.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <nav class="navbar" >
-    <a class="navbar-brand" href="#">
-        <img src="/media/logocc.jpg" width="30" height="30" class="logo" alt="">
-       
-    </a>
-    <p class="nav-title">CodeCanvas</p>
-   
-    <form class="form-inline">
-      <input class="search" type="search" placeholder="Search" aria-label="Search">
-        <i class="fa fa-search" style="font-size:25px"></i>              
-    </form>
-  </nav> 
-  <br><br><br><br>
-    <div class="dropdown-container">
-        <label for="topic-select" class="seltop">Select topic:</label>
-        <select id="topic-select">
-            <option value="Array">Array</option>
-            <option value="LinkedList">Linked List</option>
-            <option value="Searching">Searching</option>
-            <option value="Sorting">Sorting</option>
-            <option value="Stack">Stack</option>
-            <option value="Queues">Queues</option>
-            <option value="BinaryTree">Binary Tree</option>
-            <option value="BinarySearchTree">Binary Search Tree</option>
-            <option value="Graph">Graph</option>
-            <option value="Algorithms">Algorithms</option>
+    <!-- Navbar -->
+    <nav class="navbar">
+            <a href="/" class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+            </a>
 
-        </select>
+            <!-- Logo + Text (centered) -->
+            <div class="nav-center">
+                <img src="/media/logocc.png" class="logo" alt="CodeCanvas">
+                <span class="nav-title">CodeCanvas</span>
+            </div>
 
-        <label for="level-select" class="seldiff">Select difficulty level:</label>
-        <select id="level-select">
-            <option value="Easy">Easy</option>
-            <option value="Moderate">Moderate</option>
-            <option value="Hard">Hard</option>
-        </select>
+        </nav>
 
-        <button onclick="displaySelection()" class="gen">Generate question</button>
+    <div id="wrapper">
+        <div class="container">
+            <div class="head">
+                <h1 class="topic">Generate Question</h1>
+                <p class="subtitle">Select topic & difficulty • Get a random coding problem</p>
+            </div>
 
+            <div class="quiz-container">
+                <div class="dropdown-container">
+                    <div class="input-group">
+                        <label for="topic-select" class="label">Select topic:</label>
+                        <select id="topic-select" class="select">
+                            <option value="Array">Array</option>
+                            <option value="LinkedList">Linked List</option>
+                            <option value="Searching">Searching</option>
+                            <option value="Sorting">Sorting</option>
+                            <option value="Stack">Stack</option>
+                            <option value="Queues">Queues</option>
+                            <option value="BinaryTree">Binary Tree</option>
+                            <option value="BinarySearchTree">Binary Search Tree</option>
+                            <option value="Graph">Graph</option>
+                            <option value="Algorithms">Algorithms</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="level-select" class="label">Select difficulty:</label>
+                        <select id="level-select" class="select">
+                            <option value="Easy">Easy</option>
+                            <option value="Moderate">Moderate</option>
+                            <option value="Hard">Hard</option>
+                        </select>
+                    </div>
+
+                    <button onclick="displaySelection()" class="gen-btn">
+                        <i class="fas fa-magic"></i> Generate Question
+                    </button>
+                </div>
+
+                <!-- Wider side-by-side layout -->
+                <div class="content-row">
+                    <!-- Question Column – takes more space -->
+                    <div class="question-column">
+                        <p id="output" class="output-text">Your selections will appear here...</p>
+                        <div id="question" class="question-text">Loading question...</div>
+                    </div>
+
+                    <!-- Code Editor Column – balanced width -->
+                    <div class="compiler-column">
+                        <h2 class="compiler-title">Code Editor </h2>
+                        <div class="compiler-box">
+                            <textarea id="comp-color" placeholder="Write your code here..."></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    
-      <div>
-      </div>
-      <div class="ques-comp">
-        <div class="ques">
-          <div id="output">Your selections will appear here...</div> <br>
-          <div id="question">Loading question...</div>
-        </div>
-          
-        
-        <div class="compiler">
-          <h2 class="headings">Compiler</h2>
-          <div class="com-area">
-            <textarea name="" id="comp-color" cols="46" rows="12"></textarea>
-                    
-          </div>
-        </div>
-      </div>
-      
-    
-    <script src="randomques.js"></script>
+
+    <script src="/randomques.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/randomques.css">
-
-</head>
-<body>
-    <h1>Random Question Generator</h1>
-    <div class="dropdown">
-        <button onclick="myFunction1()" class="dropbtn">Topic</button>
-        <div id="myDropdown1" class="dropdown-content">
-          <a href="#">Array</a>
-          <a href="#">Linked List</a>
-          <a href="#">Searching</a>
-          <a href="#">Searching</a>
-          <a href="#">Sorting</a>
-          <a href="#">Stack</a>
-          <a href="#">Queues</a>
-          <a href="#">Binary Tree</a>
-          <a href="#">Binary Search Tree</a>
-          <a href="#">Graph</a>
-          <a href="#">Algorithms</a>
-
-
-        </div>
-      </div>
-      <div class="dropdown">
-        <button onclick="myFunction2()" class="dropbtn">Difficulty level</button>
-        <div id="myDropdown2" class="dropdown-content">
-          <a href="#">Easy</a>
-          <a href="#">Moderate</a>
-          <a href="#">Hard</a>
-        </div>
-      </div>
-      <h3>Select topic and difficulty level for a random question to appear here</h3>
-    
-      <script src="/randomques.js"></script>
-</body>
-</html> -->
