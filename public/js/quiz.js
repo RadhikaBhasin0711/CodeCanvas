@@ -113,7 +113,7 @@ function showScore() {
     resetState();
 
     const total = questions.length;
-    scoreMessage.innerHTML = `You scored <strong>${score}</strong> out of <strong>${total}</strong> question${total === 1 ? '' : 's'}`;
+    scoreMessage.innerHTML = `You scored <strong>${score}</strong> out of <strong>${total}</strong>`;
 
     nextButton.innerHTML = "Play Again";
     nextButton.style.display = "block";
