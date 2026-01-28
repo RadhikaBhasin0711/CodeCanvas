@@ -26,7 +26,6 @@ body::before {
     opacity: 0.7;
 }
 
-/* Navbar – fixed, centered, no shift */
 .navbar {
     position: fixed;
     top: 0;
@@ -43,9 +42,8 @@ body::before {
     z-index: 1000;
 }
 
-/* Back Button */
 .back-btn {
-    color: #a78bfa;
+    color: #b5a5e4;
     font-size: 22px;
     width: 44px;
     height: 44px;
@@ -63,7 +61,6 @@ body::before {
     transform: scale(1.08);
 }
 
-/* Centered Logo + Text */
 .nav-center {
     display: flex;
     align-items: center;
@@ -83,61 +80,15 @@ body::before {
 }
 
 .nav-title {
-    font-size: 22px;              /* Slightly smaller than before */
+    font-size: 28px;              
     font-weight: 700;
     background: linear-gradient(90deg, #c4b5fd, #f472b6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    opacity: 0.92;                 /* Softer, less aggressive neon */
+    opacity: 0.92;                 
     letter-spacing: 0.5px;
 }
 
-/* Right side (empty for symmetry) */
-.nav-right {
-    width: 44px;                   /* Matches back button width */
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .navbar {
-        padding: 0 16px;
-    }
-    
-    .nav-title {
-        font-size: 20px;
-    }
-    
-    .logo {
-        width: 34px;
-        height: 34px;
-    }
-}
-
-.search {
-    width: 260px;
-    height: 42px;
-    padding: 0 16px 0 40px;
-    border-radius: 50px;
-    border: 1px solid rgba(139, 92, 246, 0.3);
-    background: rgba(30, 40, 60, 0.6);
-    color: white;
-    font-size: 15px;
-}
-
-.search::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-.fa-magnifying-glass {
-    position: absolute;
-    left: 14px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #a78bfa;
-    font-size: 18px;
-}
-
-/* Wrapper – space for fixed navbar */
 #wrapper {
     padding-top: 90px;
     background: #0a0e17;
@@ -150,7 +101,6 @@ body::before {
     padding: 0 20px;
 }
 
-/* Heading – matches learn page style */
 .head {
     text-align: center;
     margin: 40px 0 60px;
@@ -171,9 +121,7 @@ body::before {
     max-width: 500px;
     margin: 0 auto;
 }
-/* Topics List */
 .main {
-    /* padding: 0 20px; */
     padding: 40px 8% 100px;
     max-width: 1400px;
     margin: 0 auto;
@@ -238,7 +186,6 @@ body::before {
     color: #a78bfa;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .topic {
         font-size: 36px;
@@ -248,8 +195,13 @@ body::before {
         padding: 0 15px;
     }
     
-    .search {
-        width: 180px;
+    .nav-title {
+        font-size: 20px;
+    }
+    
+    .logo {
+        width: 34px;
+        height: 34px;
     }
     
     .category-btn {
