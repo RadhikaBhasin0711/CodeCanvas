@@ -20,13 +20,6 @@ body {
 }
 
 
-
-/* HERO SECTION */
-.hero {
-    text-align: center;
-    padding: 100px 20px 140px;
-}
-
 .cc {
     font-size: clamp(48px, 9vw, 90px);
     font-weight: 800;
@@ -38,29 +31,26 @@ body {
     animation: smoothFloat 5s ease-in-out infinite;
 }
 
+
 @keyframes smoothFloat {
     0%, 100% { transform: translateY(0); }
     50%      { transform: translateY(-12px); }
 }
 
+
 .hero-subtitle {
-    font-size: clamp(18px, 4vw, 24px);
-    font-weight: 500;
-    opacity: 0.92;
+    font-size: clamp(18px, 3vw, 28px);
+    color: #e1e1e1;
     margin-bottom: 48px;
-    max-width: 720px;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    font-weight: 500;
+    opacity: 0.92;
     line-height: 1.4;
 }
 
-.hero-cta {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    margin-bottom: 100px;
-    flex-wrap: wrap;
-}
+
 
 .btn-primary,
 .btn-secondary {
@@ -146,17 +136,10 @@ body {
 
 /* RESPONSIVE */
 @media (max-width: 1024px) {
-    .head { padding: 24px 40px; }
     .hero { padding: 80px 20px 120px; }
 }
 
 @media (max-width: 768px) {
-    .head {
-        padding: 20px 24px;
-        flex-direction: column;
-        gap: 20px;
-    }
-    .nav-left { flex-wrap: wrap; justify-content: center; }
     .hero-cta { flex-direction: column; gap: 16px; }
     .feature-cards { gap: 28px; }
     .card { width: 100%; max-width: 340px; }
@@ -166,6 +149,7 @@ body {
     .cc { font-size: 52px; }
     .hero-subtitle { font-size: 18px; }
 }
+
 .hero {
     text-align: center;
     padding: 120px 20px 160px;
@@ -180,16 +164,9 @@ body {
     margin-bottom: 24px;
 }
 
-.hero-subtitle {
-    font-size: clamp(18px, 3vw, 28px);
-    color: #e1e1e1;
-    margin-bottom: 48px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .hero-cta {
+    justify-content: center;
+    margin-bottom: 100px;
     display: inline-block;
     background: linear-gradient(90deg, #a78bfa, #d946ef);
     color: white;
