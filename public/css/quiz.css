@@ -35,7 +35,7 @@ html, body {
 
 /* Back Button */
 .back-btn {
-    color: #a78bfa;
+    color: #b5a5e4;
     font-size: 22px;
     width: 44px;
     height: 44px;
@@ -425,7 +425,7 @@ html, body {
 #back-btn {
     background: rgba(139, 92, 246, 0.3);
     border: 1px solid #a78bfa;
-    color: #a78bfa;
+    color: #b5a5e4;
 }
 
 #back-btn:hover {
