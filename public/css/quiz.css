@@ -13,10 +13,9 @@ body {
 html, body {
     height: 100%;
     overflow-x: hidden;
-    overflow-y: auto; /* Allow vertical scrolling */
+    overflow-y: auto; 
 }
 
-/* Navbar – consistent across site */
 .navbar {
     position: fixed;
     top: 0;
@@ -33,7 +32,6 @@ html, body {
     z-index: 1000;
 }
 
-/* Back Button */
 .back-btn {
     color: #b5a5e4;
     font-size: 22px;
@@ -53,7 +51,6 @@ html, body {
     transform: scale(1.08);
 }
 
-/* Centered Logo + Text */
 .nav-center {
     display: flex;
     align-items: center;
@@ -73,21 +70,19 @@ html, body {
 }
 
 .nav-title {
-    font-size: 22px;              /* Slightly smaller than before */
+    font-size: 22px;              
     font-weight: 700;
     background: linear-gradient(90deg, #c4b5fd, #f472b6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    opacity: 0.92;                 /* Softer, less aggressive neon */
+    opacity: 0.92;                 
     letter-spacing: 0.5px;
 }
 
-/* Right side (empty for symmetry) */
 .nav-right {
-    width: 44px;                   /* Matches back button width */
+    width: 44px;                  
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .navbar {
         padding: 0 16px;
@@ -103,11 +98,7 @@ html, body {
     }
 }
 
-.nav-left {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
+
 
 .logo {
     width: 38px;
@@ -125,35 +116,8 @@ html, body {
     -webkit-text-fill-color: transparent;
 }
 
-.nav-right .search-wrapper {
-    position: relative;
-}
 
-.search {
-    width: 260px;
-    height: 42px;
-    padding: 0 16px 0 40px;
-    border-radius: 50px;
-    border: 1px solid rgba(139, 92, 246, 0.3);
-    background: rgba(30, 40, 60, 0.6);
-    color: white;
-    font-size: 15px;
-}
 
-.search::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-.fa-magnifying-glass {
-    position: absolute;
-    left: 14px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #a78bfa;
-    font-size: 18px;
-}
-
-/* Wrapper – space for fixed navbar */
 #wrapper {
     padding-top: 90px;
     background: #0a0e17;
@@ -166,7 +130,6 @@ html, body {
     padding: 0 20px;
 }
 
-/* Heading – matches Topics page */
 .head {
     text-align: center;
     margin: 30px 0 40px;
@@ -187,17 +150,15 @@ html, body {
     opacity: 0.9;
 }
 
-/* Quiz Container – compact, single-screen fit */
+
 .quiz-container {
-    .quiz-container {
     background: rgba(25, 30, 55, 0.7);
     backdrop-filter: blur(12px);
     border: 1px solid rgba(139, 92, 246, 0.25);
     border-radius: 16px;
     padding: 40px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-    /* NO max-height or overflow: hidden here — let it grow and scroll naturally */
-}
+
 }
 
 .quiz-container h2 {
@@ -209,7 +170,6 @@ html, body {
     text-align: center;
 }
 
-/* Options – 2×2 grid */
 .options-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -235,7 +195,6 @@ html, body {
     justify-content: center;
 }
 
-/* Hover – dark purple like your screenshot */
 .option-btn:hover:not([disabled]) {
     background: rgba(100, 70, 180, 0.6);    /* Deep purple hover */
     border-color: #a78bfa;
@@ -243,7 +202,6 @@ html, body {
     box-shadow: 0 8px 24px rgba(139, 92, 246, 0.3);
 }
 
-/* Disabled (after selection) */
 .option-btn:disabled {
     cursor: not-allowed;
     opacity: 0.7;
@@ -251,7 +209,6 @@ html, body {
 
 
 
-/* Next Button */
 #next-btn {
     background: linear-gradient(90deg, #a78bfa, #d946ef);
     color: white;
@@ -275,7 +232,6 @@ html, body {
 
 
 
-/* Quiz Card */
 .app {
     background: rgba(25, 30, 55, 0.6);
     backdrop-filter: blur(10px);
@@ -327,7 +283,6 @@ html, body {
     background: rgba(248, 113, 113, 0.25) !important;
     border-color: #f87171 !important;
 }
-/* Score Section */
 #score-section {
     padding: 40px 20px;
 }
@@ -343,7 +298,6 @@ html, body {
     margin: 0;
 }
 
-/* Score Buttons */
 .score-buttons {
     display: flex;
     gap: 20px;
@@ -375,7 +329,6 @@ html, body {
     box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4);
 }
 
-/* Back button – slightly different style */
 #back-to-topics-btn {
     background: rgba(139, 92, 246, 0.3);
     border: 1px solid #a78bfa;
@@ -387,7 +340,6 @@ html, body {
     color: white;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .score-buttons {
         flex-direction: column;
@@ -421,7 +373,6 @@ html, body {
     box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
 }
 
-/* Back button – slightly different style (optional) */
 #back-btn {
     background: rgba(139, 92, 246, 0.3);
     border: 1px solid #a78bfa;
@@ -433,7 +384,6 @@ html, body {
     color: white;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .topic {
         font-size: 36px;
@@ -452,14 +402,6 @@ html, body {
     }
 }
 
-/* Dropdown & Button Styles (match your theme)
-.dropdown-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin-bottom: 40px;
-} */
 
 .label {
     font-size: 18px;
@@ -505,7 +447,6 @@ html, body {
     box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4);
 }
 
-/* Output & Question Area */
 .output-area {
     background: rgba(25, 30, 55, 0.6);
     border-radius: 12px;
@@ -526,15 +467,6 @@ html, body {
     color: #e0e0ff;
     line-height: 1.6;
 }
-
-/* Dropdown Container */
-/* .dropdown-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-    justify-content: center;
-    margin-bottom: 40px;
-} */
 
 .input-group {
     display: flex;
@@ -586,7 +518,6 @@ html, body {
     box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4);
 }
 
-/* Question Card */
 .question-card {
     background: rgba(25, 30, 55, 0.7);
     border-radius: 12px;
@@ -610,7 +541,6 @@ html, body {
     word-wrap: break-word;
 }
 
-/* Compiler Card */
 .compiler-card {
     background: rgba(25, 30, 55, 0.7);
     border-radius: 12px;
@@ -626,9 +556,6 @@ html, body {
 }
 
 
-/* --- Randomques Page Specific Styles --- */
-
-/* Dropdown Container */
 .dropdown-container {
     display: flex;
     flex-wrap: wrap;
@@ -689,7 +616,6 @@ html, body {
     box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4);
 }
 
-/* Question Card */
 .question-card {
     background: rgba(25, 30, 55, 0.7);
     border-radius: 12px;
@@ -716,7 +642,6 @@ html, body {
     overflow-wrap: break-word;
 }
 
-/* Compiler Card */
 .compiler-card {
     background: rgba(25, 30, 55, 0.7);
     border-radius: 12px;
@@ -731,20 +656,6 @@ html, body {
     text-align: center;
 }
 
-/* .compiler-box textarea {
-    width: 100%;
-    min-height: 320px;
-    padding: 16px;
-    font-family: 'Courier New', monospace;
-    font-size: 16px;
-    background: rgba(10, 14, 23, 0.8);
-    color: #e0e0ff;
-    border: 1px solid rgba(139, 92, 246, 0.3);
-    border-radius: 10px;
-    resize: vertical;
-} */
-
-/* Responsive */
 @media (max-width: 768px) {
     .dropdown-container {
         flex-direction: column;
@@ -761,7 +672,7 @@ html, body {
         padding: 20px;
     }
 }
-/* Side-by-Side Layout */
+
 .content-row {
     display: flex;
     gap: 30px;
@@ -808,12 +719,10 @@ html, body {
     white-space: pre-wrap;
     word-wrap: break-word;
     overflow-wrap: break-word;
-    overflow-y: auto; /* Scroll inside if too long */
-    max-height: 60vh; /* Optional: limit height but allow internal scroll */
-
+    overflow-y: auto; 
+    max-height: 60vh; 
 }
 
-/* Text Wrapping & Spacing */
 .question-text {
     font-size: 18px;
     color: #e0e0ff;
@@ -823,7 +732,6 @@ html, body {
     overflow-wrap: break-word;
 }
 
-/* Responsive – Stack on mobile */
 @media (max-width: 992px) {
     .content-row {
         flex-direction: column;
@@ -833,7 +741,6 @@ html, body {
         min-width: 100%;
     }
 }
-/* Wider & Balanced Side-by-Side */
 .content-row {
     display: flex;
     gap: 32px;
@@ -842,7 +749,7 @@ html, body {
 }
 
 .question-column {
-    flex: 1 1 55%;               /* Takes slightly more space */
+    flex: 1 1 55%;               
     min-width: 350px;
     background: rgba(25, 30, 55, 0.7);
     border-radius: 12px;
@@ -852,7 +759,7 @@ html, body {
 }
 
 .compiler-column {
-    flex: 1 1 45%;               /* Balanced with question */
+    flex: 1 1 45%;               
     min-width: 350px;
     background: rgba(25, 30, 55, 0.7);
     border-radius: 12px;
@@ -860,11 +767,10 @@ html, body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Make compiler flexible – no fixed height */
 .compiler-box textarea {
     width: 100%;
-    height: 100%;                /* Fill the card height */
-    min-height: 450px;           /* Minimum comfortable size */
+    height: 100%;                
+    min-height: 450px;           
     padding: 16px;
     font-family: 'Courier New', monospace;
     font-size: 16px;
@@ -875,7 +781,6 @@ html, body {
     resize: vertical;
 }
 
-/* Question Text – better wrapping */
 .question-text {
     font-size: 18px;
     color: #e0e0ff;
@@ -885,7 +790,6 @@ html, body {
     overflow-wrap: break-word;
 }
 
-/* Responsive – stack on smaller screens */
 @media (max-width: 992px) {
     .content-row {
         flex-direction: column;
@@ -905,7 +809,6 @@ html, body {
     }
 }
 
-/* Extra spacing & visual balance */
 .quiz-container {
     padding: 40px 30px;
 }
