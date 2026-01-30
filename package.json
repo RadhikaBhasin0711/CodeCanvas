@@ -9,10 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^17.2.3",
     "ejs": "^3.1.10",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "node-fetch": "^2.7.0"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RadhikaBhasin0711/DSA-learning-platform.git"
@@ -24,4 +25,3 @@
   "homepage": "https://github.com/RadhikaBhasin0711/DSA-learning-platform#readme",
   "description": ""
 }
-
