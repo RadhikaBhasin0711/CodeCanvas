@@ -5,7 +5,13 @@ const fetch = require('node-fetch');
 
 require('dotenv').config(); 
 
-const port = 8080;
+const PORT = process.env.PORT || 8080;
+
+// Start server
+app.listen(PORT, () => {
+    console.log(`Server listening on port ${PORT}`);
+});
+
 
 // Static files
 app.use(express.static(path.join(__dirname, "public/css")));
@@ -197,7 +203,3 @@ app.get("/test", (req, res) => {
     res.render("randomques.ejs");
 });
 
-// Start server
-app.listen(port, () => {
-    console.log(`Server listening on port ${port}`);
-});
