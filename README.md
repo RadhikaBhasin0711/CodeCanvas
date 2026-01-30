@@ -6,9 +6,15 @@ Built with love for students, self-learners, and interview prep enthusiasts.
 
 ## 🎥 Demo Video
 
-Watch a quick demo of CodeCanvas in action (visualizations, question generation, navigation):
+Watch a quick walkthrough of CodeCanvas in action — visualizations, question generation, navigation & more:
 
-<iframe width="100%" height="500" src="https://youtu.be/dEkRR4Q1cLM" title="CodeCanvas Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div align="center">
+  [![CodeCanvas Demo](https://img.youtube.com/vi/dEkRR4Q1cLM/0.jpg)](https://www.youtube.com/watch?v=dEkRR4Q1cLM)
+</div>
+
+<p align="center">
+  Click the image to play (opens YouTube)
+</p>
 
 ## ✨ Features
 
