@@ -4,11 +4,11 @@
 
 Built with love for students, self-learners, and interview prep enthusiasts.
 
-## 🌐 Demo Video
+## 🎥 Demo Video
 
-<video src="https://github.com/RadhikaBhasin0711/CodeCanvas---DSA-Learning-Platform/blob/master/public/demo/CodeCanvas-demo.mp4" controls width="100%">
-  Your browser does not support the video tag.
-</video>
+Watch a quick demo of CodeCanvas in action (visualizations, question generation, navigation):
+
+[![CodeCanvas Demo](https://img.youtube.com/vi/abc123xyz/0.jpg)](https://youtu.be/dEkRR4Q1cLM)
 
 ## ✨ Features
 
