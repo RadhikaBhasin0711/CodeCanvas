@@ -8,7 +8,7 @@ Built with love for students, self-learners, and interview prep enthusiasts.
 
 Watch a quick demo of CodeCanvas in action (visualizations, question generation, navigation):
 
-[![CodeCanvas Demo](https://img.youtube.com/vi/abc123xyz/0.jpg)](https://youtu.be/dEkRR4Q1cLM)
+<iframe width="100%" height="500" src="https://youtu.be/dEkRR4Q1cLM" title="CodeCanvas Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## ✨ Features
 
